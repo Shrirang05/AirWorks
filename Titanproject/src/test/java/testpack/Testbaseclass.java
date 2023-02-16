@@ -36,6 +36,7 @@ public class Testbaseclass
 				MS.sendusername();
 				Thread.sleep(3000);
 				
+				
 			
 				MS.clickonnextbutton();
 				Thread.sleep(3000);
@@ -44,12 +45,13 @@ public class Testbaseclass
 				MS.sendpassword();
 				Thread.sleep(3000);
 				
+				
 				MS.MSsignin();
 				Thread.sleep(3000);
 				
 			
 				MS.clickonyesbutton();
-				Thread.sleep(3000);
+			
 				
 
 				Utilityclass.getScreenshot(driver, "My login page");
