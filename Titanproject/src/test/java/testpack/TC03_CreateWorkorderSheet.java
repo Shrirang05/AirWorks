@@ -95,18 +95,20 @@ private Createworkorderpage AM;
         AM.SelecttheNRCTasktype();
        
         AM.SelecttheRoutineTaskcard();
-       
-        AM.SelecttheMaintainancestartdate();
+        Thread.sleep(3000);
+        AM.SelecttheMDfromdate();
+        Thread.sleep(3000);
+//        AM.SelecttheMaintainancestartdate();
               
        
         AM.SelecttheMaintainanceEnddate();
-        
+        Thread.sleep(3000);
         AM.passingtheMaintainanceData();
        System.out.println("Maintain data send");
-      
+       Thread.sleep(3000);
      
         AM.passingtheMaintainancestatus();
-     
+        Thread.sleep(3000);
         AM.passingtheMaintainancestatus();
        
 //     
@@ -136,10 +138,10 @@ private Createworkorderpage AM;
         Thread.sleep(2000);
         System.out.println("2nd last");
         AM.clickoncloseButton();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         
         AM.clickonworkorderbutton();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         
         
         

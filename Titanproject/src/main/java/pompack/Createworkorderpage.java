@@ -73,7 +73,7 @@ public class Createworkorderpage
 	@FindBy (xpath ="(//label[@class='radio'])[2]")
 	private WebElement BTTB;
 	
-	
+	//label[normalize-space()='2-BTTB']
 	public void clickonAircraftReg()
 	{
 		AircraftReg.click(); 
@@ -121,6 +121,7 @@ public class Createworkorderpage
 	private WebElement Customerworkorderno;
 	public void passingtheCustomerworkorderno()
 	{
+		Customerworkorderno.clear();
 		Customerworkorderno.sendKeys("ABC@123"); 
 	}
 	
@@ -152,8 +153,9 @@ public class Createworkorderpage
 	{
 		Actualstartdate.sendKeys("17-02-2023");
 	}
-
-	@FindBy (xpath = "//span[normalize-space()='Select Planning Check SPOC']")
+	//span[normalize-space()='Select Planning Check SPOC']
+	//button[@title='Select Planning Check SPOC']
+	@FindBy (xpath = "//button[@title='Select Planning Check SPOC']")
 	private WebElement planningcheckspoc;
 	public void clickonplanningcheckspoc()
 	{
@@ -204,6 +206,7 @@ public class Createworkorderpage
 	private WebElement Series;
 	public void passingtheseries()
 	{
+		Series.clear();
 		Series.sendKeys("12345");
 	}
 	
@@ -259,14 +262,27 @@ public class Createworkorderpage
 		RoutineTaskcard.click();
 	}
 	
-
 	@FindBy (xpath = "//input[@id='txtMDFromDate']")
-	private WebElement Maintainancestartdate;
-	public void SelecttheMaintainancestartdate()
+	private WebElement MDfromdate;
+	public void SelecttheMDfromdate()
 	{
-		Maintainancestartdate.clear();
-		Maintainancestartdate.sendKeys("17-02-2023");
+		MDfromdate.click();
+		MDfromdate.clear();
+		MDfromdate.sendKeys("18-02-2023");
+//		MDfromdate.click();
 	}
+	
+//	//input[@id='txtMDFromDate']
+//	//td[normalize-space()='18']
+//	@FindBy (xpath = "//input[@id='txtMDFromDate']")
+//	private WebElement Maintainancestartdate;
+//	public void SelecttheMaintainancestartdate()
+//	{
+////		Maintainancestartdate.click();
+//		Maintainancestartdate.clear();
+//		Maintainancestartdate.sendKeys("18-02-2023");
+////		Maintainancestartdate.click();
+//	}
 	
 
 	
@@ -274,6 +290,8 @@ public class Createworkorderpage
 	private WebElement MaintainanceEnddate;
 	public void SelecttheMaintainanceEnddate()
 	{
+		MaintainanceEnddate.click();
+		MaintainanceEnddate.clear();
 		MaintainanceEnddate.sendKeys("19-02-2023");
 	}
 	

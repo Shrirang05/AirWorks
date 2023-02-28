@@ -26,7 +26,7 @@ public class Testbaseclass
 		  		driver.manage().window().maximize();
 		  		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		  		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-		  		driver.get("https://pretitan.airworks.in/");	
+		  		driver.get("https://testtitan.airworks.in/");	
 
 		  		MS = new Loginpomclass(driver);
 				

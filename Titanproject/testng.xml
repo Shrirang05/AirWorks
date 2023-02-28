@@ -3,8 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testpack.Verifylogoutfunctionality"/>
-      <class name="testpack.Testbaseclass"/>
+      <class name="testpack.TC03_CreateWorkorderSheet"/>
+      <class name="testpack.TC04_Editworkordersheet"/>
+      <class name="testpack.TC02_VerifyLogoutFunctionality"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

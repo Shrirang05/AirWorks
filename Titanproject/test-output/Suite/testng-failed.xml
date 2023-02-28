@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testpack.Verifylogoutfunctionality">
+      <class name="testpack.TC03_CreateWorkorderSheet">
         <methods>
-          <include name="verifylogout"/>
           <include name="tearDown"/>
           <include name="SetUp"/>
+          <include name="verifyAMRObutton"/>
         </methods>
-      </class> <!-- testpack.Verifylogoutfunctionality -->
+      </class> <!-- testpack.TC03_CreateWorkorderSheet -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
