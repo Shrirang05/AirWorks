@@ -49,6 +49,7 @@ public class PccTaskAllocation
 		 ATAselect.click();
 	}
 	
+	
 	//button[@title='AWI Zone']
 	@FindBy (xpath = "//button[@title='AWI Zone']")
 	private WebElement AWIzone;
@@ -90,7 +91,7 @@ public class PccTaskAllocation
 	}
 	
 	//li[@class='active']//input[@value='G00210']
-	@FindBy (xpath = "//li[@class='active']//input[@value='G00210']")
+	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//input[@value='G00210']")
 	private WebElement selectAME1;
 	public void clickonparticularAME1()
 	{
@@ -131,7 +132,7 @@ public class PccTaskAllocation
 	
 	
 	//tbody/tr[@id='grid_grid_rec_2']/td[3]/div[1]
-	@FindBy (xpath = "//tbody/tr[@id='grid_grid_rec_2']/td[3]/div[1]")
+	@FindBy (xpath = "//tr[@id='grid_grid_rec_2']//td[2]")
 	private WebElement select2ndgrid;
 	public void clickonselect2ndgrid()
 	{
@@ -146,7 +147,7 @@ public class PccTaskAllocation
 	}
 	
 	//td[@id='grid_grid_cell_2_number']
-	@FindBy (xpath = "//td[@id='grid_grid_cell_2_number']")
+	@FindBy (xpath = "//tr[@id='grid_grid_rec_3']//td[2]")
 	private WebElement select3rdgrid;
 	public void clickon3rdgrid()
 	{
@@ -162,7 +163,7 @@ public class PccTaskAllocation
 	}
 	
 	//tr[@id='grid_grid_rec_4']
-	@FindBy (xpath = "//tr[@id='grid_grid_rec_4']")
+	@FindBy (xpath = "//tr[@id='grid_grid_rec_4']//td[2]")
 	private WebElement select4thgrid;
 	public void clickon4thgrid()
 	{
@@ -173,17 +174,38 @@ public class PccTaskAllocation
 	private WebElement gofor4thday;
 	public void clickon4thdayinthegrid()
 	{
-		gofor4thday.sendKeys("4");
+		gofor4thday.sendKeys("1");
 	}
 	
 	//tbody/tr[@id='grid_grid_rec_5']/td[2]/div[1]
-	@FindBy (xpath = "//tbody/tr[@id='grid_grid_rec_5']/td[2]/div[1]")
+	@FindBy (xpath = "//tr[@id='grid_grid_rec_5']//td[2]")
 	private WebElement select5thgrid;
 	public void clickon5thgrid()
 	{
 		select5thgrid.click();
 	}
 	
+	@FindBy (xpath = "//input[@id='grid_grid_edit_5_7']")
+	private WebElement gofor5thday;
+	public void clickon5thdayinthegrid()
+	{
+		gofor5thday.sendKeys("3");
+	}
 	
+	//button[@id='btnsubmit']
+	@FindBy (xpath = "//button[@id='btnsubmit']")
+	private WebElement AllocateButton;
+	public void clickonAllocateButton()
+	{
+		AllocateButton.click();
+	}
+	
+	//button[normalize-space()='ok']
+	@FindBy (xpath = "//button[normalize-space()='ok']")
+	private WebElement OkButton;
+	public void clickonOkButton()
+	{
+		OkButton.click();
+	}
 	
 }

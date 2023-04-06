@@ -1,0 +1,6 @@
+2023-04-06 11:00:04,247  INFO [main] Titan:39 - clickonsignINbutton
+2023-04-06 11:00:07,982  INFO [main] Titan:43 - Send username
+2023-04-06 11:00:11,134  INFO [main] Titan:49 - Click on next button
+2023-04-06 11:00:14,301  INFO [main] Titan:54 - Send Password
+2023-04-06 11:00:18,784  INFO [main] Titan:59 - MS sign in
+2023-04-06 11:00:27,161  INFO [main] Titan:64 - Click on yes button

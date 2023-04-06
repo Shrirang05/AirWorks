@@ -2,6 +2,7 @@ package testpack;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pompack.Createworkorderpage;
@@ -16,131 +17,171 @@ private Createworkorderpage AM;
     {
     	AM = new Createworkorderpage(driver);
     	AM.clickonamrobutton();
-    
+        log.info("click on AMRO button");
     	
         AM.clickonplanningbutton();
+        log.info("click on planning button");
      
         AM.clickonworkorder();
-        
+        log.info("click on work order");
         
         AM.clickoncreateworkorder();
-      
+        log.info("click on create work order");
+        
+        AM.validateclickoncreateworkorder();
+       Assert.assertTrue (AM.validateclickoncreateworkorder());
+       log.info("validate create work order page opens");
+     
         
         AM.clickonnumberingtype();
+        log.info("Select numbering type");
        
         AM.SelectoWPOHSR();
+        log.info("Select WPOHSR as a numbering type");
+        
+       Assert.assertTrue (AM.validateSelectoWPOHSR());
+       log.info("validate WPO-HSR-");
         
         AM.clickonAircraftReg();
-      
+        log.info("Click on Aircraft Reg");
         
    
         AM.clickonEngine();
+        log.info("Click on Engine");
        
         
         AM.selectonEngine();
-       
+        log.info("Select one Engine");
         
         AM.selectTypeofcheck();
+        log.info("click on Type of check");
         
         
         AM.clickoneTypeofcheck();
+        log.info("Select one Type of check");
         
         AM.passingtheCustomerworkorderno();
-        
+        log.info("Passing the customer work order no.");
         
         AM.clickonplannedstartdate();
-        System.out.println("startdate");
+        log.info("Click on planned start date");
        
 //        AM.clickondate()
-       System.out.println("clickondate");
        
         AM.clickonplannedEnddate();
-       System.out.println("end date");
+        log.info("click on planned End date");
       
         AM.clickonActualstartdate();
-        System.out.println("act start date");
+        log.info("click on Actual start date");
        
         AM.clickonplanningcheckspoc();
-        System.out.println("planning check spoc");
+        log.info("click on planning check spoc");
         
         AM. ButtonofAkhilesKSpoc();
-       System.out.println("akhilesk Spoc");
+        log.info("select akhilesk as Spoc person");
         
         AM.selectthestation();
-       System.out.println("select station");
+        log.info("select station");
         
         AM. Hosurstation();
-       System.out.println("hosu station");
+        log.info("select hosur as a station");
         
         AM.SelectFormat();
-        System.out.println("select frmt");
+        log.info("select format");
         
         AM.SelectBaseMaintainance();
-        System.out.println(" base main select");
+        log.info("Select Base maintainance");
 
         AM.passingtheseries();
+        log.info("Passing the series");
         
         AM.SelectMaintainancedata();
-        System.out.println("sct main dt");
+        log.info("select maintainance data");
        
         AM.SelecttheTasktype();
+        log.info("select Task type");
         
         
         AM.SelecttheADsTasktype();
+        log.info("select the ADs as a Task type");
        
         AM.SelecttheAWRTasktype();
+        log.info("select the AWR as a Task type");
      
         AM.SelecttheADDTasktype();
+        log.info("select the ADD as a Task type");
        
         AM.SelecttheNRCTasktype();
+        log.info("select the NRC as a Task type");
        
         AM.SelecttheRoutineTaskcard();
-        Thread.sleep(3000);
+        log.info("select the Routine as a Task type");
+        Thread.sleep(1000);
         AM.SelecttheMDfromdate();
-        Thread.sleep(3000);
+        log.info("select the Maintainance start date");
+        Thread.sleep(1000);
 //        AM.SelecttheMaintainancestartdate();
               
        
         AM.SelecttheMaintainanceEnddate();
-        Thread.sleep(3000);
+        log.info("select the Maintainance End date");
+        Thread.sleep(1000);
         AM.passingtheMaintainanceData();
-       System.out.println("Maintain data send");
-       Thread.sleep(3000);
+        log.info("Sending the Maintainance data");
+       Thread.sleep(1000);
      
         AM.passingtheMaintainancestatus();
-        Thread.sleep(3000);
-        AM.passingtheMaintainancestatus();
+        log.info("passing the maintainance status");
+        Thread.sleep(1000);
+//        AM.passingtheMaintainancestatus();
+//        log.info("passing the maintainance status");
        
 //     
         AM.clickonAddButton();
+        log.info("Click on Add button");
         
         AM.clickonCloseButton();
+        log.info("Click on Close button");
         
         AM.clickonMagnifierglass();
+        log.info("Click on magnifier glass");
 
         AM.clickonBaseAircraftmodel();
+        log.info("Click on BaseAircraft model");
         
         AM.selectBaseAircraftmodel();
+        log.info("Click on BaseAircraft model");
        
         AM.clickonSearchButton();
+        log.info("Click on Search Button");
+        
+        Thread.sleep(10000);
        
-        AM.clickonFirstcheckbox();
+//        AM.clickonFirstcheckbox();
+//        log.info("Click on First check box");
        
         AM.clickonSecondcheckbox();
+        log.info("Click on Second check box");
        
         AM.clickonThirdcheckbox();
+        log.info("Click on Third check box");
        
         AM.clickonFourthcheckbox();
+        log.info("Click on Fourth check box");
        
         AM.clickonFifthcheckbox();
+        log.info("Click on Fifth check box");
        Thread.sleep(2000);
         AM.clickonokButton();
+        log.info("Click on ok Button");
         Thread.sleep(2000);
-        System.out.println("2nd last");
-        AM.clickoncloseButton();
-        Thread.sleep(5000);
+     
+//        AM.clickoncloseButton();
+//        log.info("Click on close Button");
+//        Thread.sleep(2000);
         
         AM.clickonworkorderbutton();
+        log.info("Click on workorder Button");
         Thread.sleep(4000);
         
         

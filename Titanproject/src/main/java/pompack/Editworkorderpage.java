@@ -25,6 +25,15 @@ public class Editworkorderpage
 	{
 		Editworkorder.click();
 	}
+	
+	//label[text()='SELECT WORK ORDER']
+	@FindBy (xpath = "//label[text()='SELECT WORK ORDER']")
+	private WebElement ValidateEditworkorder;
+	public boolean ValidateclickonEditworkorder()
+	{
+	   return ValidateEditworkorder.isDisplayed();
+	}
+	
 //	WPO-HSR-000187-0223
 	@FindBy (xpath = "//input[@id='txtWoNo']")
 	private WebElement workorderno;
@@ -91,6 +100,15 @@ public class Editworkorderpage
 	}
 	
 //	https://pretitan.airworks.in/WorkOrder/CreateWorkOrder?WONo=WPO-HSR-000187-0223
+	
+	@FindBy (xpath = "//label[text()='Update Work Order']")
+	private WebElement ValidateUpdateworkorder;
+	public boolean ValidateclickonUpdateworkorder()
+	{
+	   return ValidateUpdateworkorder.isDisplayed();
+	}
+	
+	
 	
 	@FindBy (xpath = "//select[@id='ddlEngineWO']//option[@value='117'][normalize-space()='V2500-A1']")
 	private WebElement changeEngine;

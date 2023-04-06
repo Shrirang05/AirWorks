@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpack.TC07_VerifyNonConfermanceReport">
+      <class name="testpack.TC03_CreateWorkorderSheet">
         <methods>
-          <include name="VerifyZoneAllocationpage"/>
           <include name="tearDown"/>
           <include name="SetUp"/>
+          <include name="verifyAMRObutton"/>
         </methods>
-      </class> <!-- testpack.TC07_VerifyNonConfermanceReport -->
+      </class> <!-- testpack.TC03_CreateWorkorderSheet -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

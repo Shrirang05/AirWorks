@@ -1,6 +1,7 @@
 package pompack;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,8 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Createworkorderpage 
 {
+  
 	private WebDriver driver;
-	private Actions Act;
+	public Actions Act;
 	
 	public Createworkorderpage(WebDriver driver)
 	{
@@ -21,6 +23,8 @@ public class Createworkorderpage
 		PageFactory.initElements(driver,this);
 	}
 	
+	 JavascriptExecutor js = (JavascriptExecutor) driver;
+	 
 	//a[@id='4823'] = for pre-titan
 	@FindBy (xpath ="//a[@id='4823']")
 	private WebElement AMROclick;
@@ -29,7 +33,7 @@ public class Createworkorderpage
 		AMROclick.click();
 	}
 	
-	@FindBy (xpath = "//a[normalize-space()='Planning']//span[@class='fa fa-chevron-down']")
+	@FindBy (linkText = "Planning")
 	private WebElement planning;
 	public void clickonplanningbutton()
 	{
@@ -50,6 +54,15 @@ public class Createworkorderpage
 		createworkorder.click();
 	}
 	
+	//label[text()='CREATE WORK ORDER']
+	@FindBy (xpath = "//label[text()='CREATE WORK ORDER']")
+	private WebElement validatecreateworkorder;
+	public boolean validateclickoncreateworkorder()
+	{
+		return validatecreateworkorder.isDisplayed();
+	}
+	
+	
 	@FindBy (xpath = "//select[@id='ddlNumType']")
 	private WebElement Numberingtype;
 	public void clickonnumberingtype()
@@ -64,6 +77,17 @@ public class Createworkorderpage
 	{
 		WPOHSR.click(); 
 	}
+	
+	//option[text()='WPO-HSR-']
+	@FindBy (xpath ="//option[text()='WPO-HSR-']")
+	private WebElement validateWPOHSR;
+	public boolean validateSelectoWPOHSR()
+	{
+		return WPOHSR.isDisplayed(); 
+	}
+	
+	
+	
 	
 	//button[@title='Select Aircraft Regn']
 	
@@ -266,8 +290,8 @@ public class Createworkorderpage
 	private WebElement MDfromdate;
 	public void SelecttheMDfromdate()
 	{
-		MDfromdate.click();
-		MDfromdate.clear();
+//		MDfromdate.click();
+//		MDfromdate.clear();
 		MDfromdate.sendKeys("18-02-2023");
 //		MDfromdate.click();
 	}
@@ -290,8 +314,8 @@ public class Createworkorderpage
 	private WebElement MaintainanceEnddate;
 	public void SelecttheMaintainanceEnddate()
 	{
-		MaintainanceEnddate.click();
-		MaintainanceEnddate.clear();
+//		MaintainanceEnddate.click();
+//		MaintainanceEnddate.clear();
 		MaintainanceEnddate.sendKeys("19-02-2023");
 	}
 	
@@ -332,11 +356,14 @@ public class Createworkorderpage
 	}
 	
 	
-	@FindBy (xpath = "//button[@id='btnMDSave']")
+	@FindBy (id="btnMDSave")
 	private WebElement AddButton;
     public void clickonAddButton()
 	{
     	 AddButton.click();
+    	
+//    	js.executeScript(argument, null)
+//    	Act.moveToElement(AddButton).click().build().perform();
 	}
     
     @FindBy (xpath = "//div[@id='Maintenance_DataModal']//button[@type='button'][normalize-space()='Close']")
@@ -427,22 +454,32 @@ public class Createworkorderpage
     }
 
   //button[@id='btnCreateWorkOrder']
-
     
-    @FindBy (xpath = "//button[@id='btnClearWOForm']")
+    
+
+    @FindBy (id="btnCreateWorkOrder")
     private WebElement workorderbutton;
     public void clickonworkorderbutton()
     {
-//      JavascriptExecutor js = (JavascriptExecutor) 	driver;
-//      
-//      js.executeScript("document.getElementById('btnCreateWorkOrder').click()");
-         
-          Act = new Actions(driver);
-    	 Act.moveToElement(workorderbutton).build().perform();
-    	 Act.click().build().perform();
+      workorderbutton.isEnabled();
+	  workorderbutton.click();
+    	
+    	
+//      JavascriptExecutor js = (JavascriptExecutor) driver;
+//      js.executeScript("arguments[0].click(),workorderbutton");
+        
+
+	  
+//    	JavascriptExecutor js = (JavascriptExecutor) driver;
+//    	js.executeScript("window.scrollBy(0,1000)");
+    	
 //    	WebDriverWait wait = new WebDriverWait(driver, 20);
 //    	wait.until(ExpectedConditions.visibilityOf(workorderbutton));
-//    workorderbutton.click();
+//        workorderbutton.click();
+//    	
+//    	 workorderbutton.click();
+    	
+    	
     }
     
     
@@ -463,7 +500,20 @@ public class Createworkorderpage
 	
 	
 	
-	
+//  JavascriptExecutor js = (JavascriptExecutor) driver;
+//  js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//    workorderbutton.click();
+//  
+//  js.executeScript("document.getElementById('btnCreateWorkOrder').click()");
+     
+//   Act = new Actions(driver);
+//	 Act.moveToElement(workorderbutton).perform();
+//	 Act.sendKeys(Keys.ENTER).perform();
+//	 
+	 
+//	WebDriverWait wait = new WebDriverWait(driver, 20);
+//	wait.until(ExpectedConditions.visibilityOf(workorderbutton));
+//workorderbutton.click();
 	
 	
 	
