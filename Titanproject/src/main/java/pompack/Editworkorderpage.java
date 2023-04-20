@@ -1,5 +1,7 @@
 package pompack;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -34,12 +36,20 @@ public class Editworkorderpage
 	   return ValidateEditworkorder.isDisplayed();
 	}
 	
+	//div[1]//table[1]//tbody[1]//tr//td[2]
+//	@FindBy (xpath = "//div[1]//table[1]//tbody[1]//tr//td[2]")
+//	private List <WebElement> workorderselection;
+//	public void clickonworkorderselection()
+//	{
+//		workorderselection.get(workorderselection.size()-1).click();
+//	}
+	
 //	WPO-HSR-000187-0223
 	@FindBy (xpath = "//input[@id='txtWoNo']")
 	private WebElement workorderno;
 	public void Passingworkorderno()
 	{
-		workorderno.sendKeys("WPO-HSR-000192-0223");
+		workorderno.sendKeys("WPO-HSR-000220-0423");
 	}
 	
 	//input[@id='txtTypeCheck']
@@ -91,8 +101,8 @@ public class Editworkorderpage
 	}
 	
 //	WPO-HSR-000190-0223
-	//div[@title='WPO-HSR-000187-0223']
-	@FindBy (xpath = "//div[@title='WPO-HSR-000192-0223']")
+//	div[@title='WPO-HSR-000187-0223']
+	@FindBy (xpath = "//div[@title='WPO-HSR-000220-0423']")
 	private WebElement selectworkorder;
 	public void clickonworkordertoedit()
 	{
@@ -156,7 +166,7 @@ public class Editworkorderpage
 	public void clickonplannedstartdate()
 	{
 		plannedstartdate.clear();
-		plannedstartdate.sendKeys("20-02-2023");
+		plannedstartdate.sendKeys("13-04-2023");
 	}
 	
 
@@ -165,7 +175,7 @@ public class Editworkorderpage
 	public void clickonplannedEnddate()
 	{
 		plannedEnddate.clear();
-		plannedEnddate.sendKeys("25-02-2023");
+		plannedEnddate.sendKeys("30-04-2023");
 	}
 
 	@FindBy (xpath = "//input[@id='txtActStartDate']")
@@ -173,7 +183,7 @@ public class Editworkorderpage
 	public void clickonActualstartdate()
 	{
 		Actualstartdate.clear();
-		Actualstartdate.sendKeys("20-02-2023");
+		Actualstartdate.sendKeys("15-04-2023");
 	}
 	
 	//button[@id='btnWorkOrderConfirm']

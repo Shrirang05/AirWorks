@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpack.TC03_CreateWorkorderSheet">
+      <class name="testpack.TC12_Workflowforworkorder">
         <methods>
           <include name="tearDown"/>
           <include name="SetUp"/>
-          <include name="verifyAMRObutton"/>
+          <include name="verifyWorkflowforworkorder"/>
         </methods>
-      </class> <!-- testpack.TC03_CreateWorkorderSheet -->
+      </class> <!-- testpack.TC12_Workflowforworkorder -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

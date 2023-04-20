@@ -39,7 +39,8 @@ public class TC04_Editworkordersheet extends Testbaseclass
         Assert.assertTrue (EW.ValidateclickonEditworkorder());
         log.info("validate Select work order page opens");
       
-        
+//        EW.clickonworkorderselection();
+      
         EW.Passingworkorderno();
         log.info("Passing Workorder No.");
         Thread.sleep(2000);

@@ -18,7 +18,7 @@ public class AuthorizeWorkOrder
 	}
 	
 	//a[normalize-space()='Authorize Work Order']
-	@FindBy (xpath = "//a[normalize-space()='Authorize Work Order']")
+	@FindBy (xpath = "//a[text()='Authorize Work Order']")
 	private WebElement Authorizedworkorder;
 	public void clickonAuthorizedworkorder()
 	{
@@ -31,14 +31,14 @@ public class AuthorizeWorkOrder
 	private WebElement workorderno;
 	public void Passingworkorderno()
 	{
-		workorderno.sendKeys("WPO-HSR-000192-0223");
+		workorderno.sendKeys("WPO-HSR-000215-0423");
 	}
 	
 	//span[normalize-space()='Select Aircraft Regn']
 	@FindBy (xpath ="//button[@title='Select Aircraft Regn']")
 	private WebElement AircraftReg;
 	
-	@FindBy (xpath ="(//input[@value='21']")
+	@FindBy (xpath ="//input[@value='21']")
 	private WebElement BTTB;
 	
 	//label[normalize-space()='2-BTTB']
@@ -80,20 +80,65 @@ public class AuthorizeWorkOrder
 		SelectStation.click();
 	}
 	
-	@FindBy (xpath = "//option[normalize-space()='Cochin']")
+	@FindBy (xpath = "//option[@value='291']")
 	private WebElement SelectStationCoachin;
 	public void clickonCochinstation()
 	{
-		SelectStation.click();
+		SelectStationCoachin.click();
 	}
 	
 	//button[@id='Search']
-	@FindBy (xpath = "//button[@id='Search']")
+	@FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/div[5]/div[2]/div[1]/button[1]")
 	private WebElement Searchbutton;
 	public void clickonSearchbutton()
 	{
 		Searchbutton.click();
 	}
+	
+	//tr[@id='grid_gridSearchResult_rec_1']//td[4]
+	@FindBy (xpath = "//tr[@id='grid_gridSearchResult_rec_1']//td[4]")
+	private WebElement Numberingtypecolumn;
+	public void clickonNumberingtypecolumn()
+	{  
+		Act= new Actions (driver);
+		Act.moveToElement(Numberingtypecolumn).doubleClick().build().perform();
+	}
+	
+	//td[normalize-space()='AWO-HSR-']
+	@FindBy (xpath = "//td[normalize-space()='AWO-HSR-']")
+	private WebElement SelectNumberingtype;
+	public void clickonSelectNumberingtype()
+	{  
+		SelectNumberingtype.click();
+	}
+	
+	//button[@id='btnAuthorized']
+	@FindBy (xpath = "//button[@id='btnAuthorized']")
+	private WebElement Authorizebutton;
+	public void clickonAuthorizebutton()
+	{  
+		Authorizebutton.click();
+	}
+	
+	//td[@class='w2ui-grid-data']//input[@type='checkbox']
+	@FindBy (xpath = "//td[@class='w2ui-grid-data']//input[@type='checkbox']")
+	private WebElement CheckboxforAuthorize;
+	public void clickoncheckbox()
+	{  
+		CheckboxforAuthorize.click();
+	}
+	
+	//button[normalize-space()='Proceed']
+	@FindBy (xpath = "//button[normalize-space()='Proceed']")
+	private WebElement proceedbutton;
+	public void clickonproceedbutton()
+	{  
+		 proceedbutton.click();
+	}
+	
+	
+	
+	
 	
 	
 	

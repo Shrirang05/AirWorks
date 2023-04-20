@@ -38,7 +38,7 @@ public class Loginpomclass
 	
 	public void sendpassword()
 	{
-		Password.sendKeys("Developer@AWI^2023");
+		Password.sendKeys("Tester@AWI^2023");
 	}
 	
 	@FindBy(xpath="//input[@id='idSIButton9']")

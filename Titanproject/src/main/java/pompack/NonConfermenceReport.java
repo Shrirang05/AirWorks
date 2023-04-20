@@ -99,6 +99,17 @@ public class NonConfermenceReport
 		return AreaofAuditCAMOValidation.isDisplayed();
 	}
 	
+	//input[@id='txtChecklistNo']
+	@FindBy (xpath = "//input[@id='txtChecklistNo']")
+	private WebElement ChecklistNocoloumn;
+	public void passingChecklistNocoloumn()
+	{
+		ChecklistNocoloumn.sendKeys("15");
+	}
+	
+	
+	
+	
 	
 	//input[@id='txtAuditFromdate']
 	@FindBy (xpath = "//input[@id='txtAuditFromdate']")
@@ -117,7 +128,7 @@ public class NonConfermenceReport
 	}
 	
 	//input[@value='30']
-	@FindBy (xpath = "/html[1]/body[1]/span[1]/span[1]/span[2]/ul[1]/li[8]")
+	@FindBy (xpath = "//li[text()='NOIDA']")
 	private WebElement PlaceofAuditNoida;
 	public void clickonPlaceofAuditNoida()
 	{
@@ -132,7 +143,7 @@ public class NonConfermenceReport
 	}
 	
 	//button[@title='Select Status']
-	@FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/div[5]/div[1]/div[1]/div[4]/span[1]/span[1]/span[1]/span[1]")
+	@FindBy (xpath = "//span[@id='select2-ddlStatus-container']")
 	private WebElement SelectStatus;
 	public void clickonSelectStatus()
 	{
@@ -191,7 +202,8 @@ public class NonConfermenceReport
 	{
 		selectpalaceofAudit.click();
 	}
-	
+	//li[text()='HOSUR']
+	//li[@id='select2-ddlPlaceOfAudit-result-d5is-41']
 	@FindBy (xpath = "//li[text()='HOSUR']")
 	private WebElement PlaceofAuditHosur;
 	public void clickonPlaceofAuditHosur()
@@ -207,7 +219,7 @@ public class NonConfermenceReport
 	{
 		AuditeeName.click();
 	}
-	
+	//li[text()='AMBRISH KUMAR TIWARI (G01527)']
 	//ul[@class='multiselect-container dropdown-menu show']//input[@value='G01527']
 	@FindBy (xpath = "//li[text()='AMBRISH KUMAR TIWARI (G01527)']")
 	private WebElement oneAuditeeName;
@@ -789,7 +801,7 @@ public class NonConfermenceReport
 		
 		//span[@id='select2-ddl_DocumentCategory-container']
 		//li[@id='select2-ddl_DocumentCategory-result-g22m-1622']
-		@FindBy (xpath = "/html[1]/body[1]/span[1]/span[1]/span[2]/ul[1]/li[2]")
+		@FindBy (xpath = "//li[@id='select2-ddl_DocumentCategory-result-97xi-1622']")
 		private WebElement DocumentCategoryNCR ;
 		public void clickonDocumentCategoryNCR()
 		{

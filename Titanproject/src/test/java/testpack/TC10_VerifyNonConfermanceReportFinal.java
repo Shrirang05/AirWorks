@@ -47,6 +47,8 @@ public class TC10_VerifyNonConfermanceReportFinal extends Testbaseclass
 	  Assert.assertTrue(NC.CheckAreaofAuditCAMOValidation());
 	  log.info("Check for CAMO selection");
 	  Thread.sleep(2000);
+	  
+		
 		
 	  NC.clickonDateofAudit();
 		log.info("passing the date of Audit");
@@ -78,7 +80,7 @@ public class TC10_VerifyNonConfermanceReportFinal extends Testbaseclass
 		 Thread.sleep(2000);
 		 
 		 Assert.assertTrue(NC.CheckADDNCRvalidation());
-		 log.info("Landing on Add NCR Screen");
+		 log.info("Validate on Add NCR Screen");
 		 
 		NC.clickonAreaofAudit();
 		log.info("Click on Area of Audit for Crete NCR");
@@ -90,7 +92,9 @@ public class TC10_VerifyNonConfermanceReportFinal extends Testbaseclass
 //		String expectedText = "CAMO";
 //		String ActualText = .get
 		
-		
+		NC.passingChecklistNocoloumn();
+		Thread.sleep(1000);
+		log.info("Enter checklist number for NCR");
 		
 		 Thread.sleep(2000);
 		NC.clickonDateofAuditforAdd();
@@ -215,9 +219,9 @@ public class TC10_VerifyNonConfermanceReportFinal extends Testbaseclass
 		 Thread.sleep(5000);
 		NC.ClickonOksavesuccefully();
 		log.info("Click on ok button on pop-up");
-		 Thread.sleep(5000);
+		 Thread.sleep(3000);
 		NC.ClickonBacktoview();
-		 Thread.sleep(5000);
+		 Thread.sleep(3000);
 		 log.info("Click on Back button to go on Landing page for searching the data for Edit");
  		
 //		 Start For Edit
@@ -257,15 +261,15 @@ public class TC10_VerifyNonConfermanceReportFinal extends Testbaseclass
 		 Assert.assertTrue(NC.EditNCRvalidation());
 		 log.info("Landed on Edit NCR screen");
 		 
-		 NC.clickonDateofAuditforEdit();
-		 log.info("click on Date of Audit for Edit");
-		 Thread.sleep(2000);
-		 NC.clickonHosurplaceofaudit();
-		 log.info("click on Hosur place of audit");
-		 Thread.sleep(2000);
-		 NC.clickonAHMEDABADplaceofaudit();
-		 log.info("Select Ahemdabad as a place of audit");
-		 Thread.sleep(2000);
+//		 NC.clickonDateofAuditforEdit();
+//		 log.info("click on Date of Audit for Edit");
+//		 Thread.sleep(2000);
+//		 NC.clickonHosurplaceofaudit();
+//		 log.info("click on Hosur place of audit");
+//		 Thread.sleep(2000);
+//		 NC.clickonAHMEDABADplaceofaudit();
+//		 log.info("Select Ahemdabad as a place of audit");
+//		 Thread.sleep(2000);
 		 
 		 NC.ClickonNameofAuditeesforEdit();
 		 log.info("Select Ahemdabad as a place of audit");

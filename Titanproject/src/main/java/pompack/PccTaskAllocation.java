@@ -114,6 +114,84 @@ public class PccTaskAllocation
 		Select1grid.click();
 	}
 	
+	//td[contains(text(),'Default Inputs')]
+	@FindBy (xpath = "//td[contains(text(),'Default Inputs')]")
+	private WebElement DefaultInputs;
+	public void clickonDefaultInputs()
+	{
+		DefaultInputs.click();
+	}
+	
+	//button[@title='None selected']
+	@FindBy (xpath = "//button[@title='None selected']")
+	private WebElement AWIZoneselect;
+	public void clickonAWIZoneselect()
+	{
+		AWIZoneselect.click();
+	}
+	
+	//label[@class='checkbox']//input[@value='2723']
+	@FindBy (xpath = "//label[@class='checkbox']//input[@value='2723']")
+	private WebElement AWIZonecabin;
+	public void clickonAWIZonecabin()
+	{
+		AWIZonecabin.click();
+	}
+	
+	//label[@class='checkbox']//input[@value='2724']
+	@FindBy (xpath = "//label[@class='checkbox']//input[@value='2724']")
+	private WebElement AWIZoneEmpennage;
+	public void clickonAWIZoneEmpennage()
+	{
+		AWIZoneEmpennage.click();
+	}
+	
+	//span[normalize-space()='CABIN + PAX DOORS, Empennage']
+	@FindBy (xpath = "//span[normalize-space()='CABIN + PAX DOORS, Empennage']")
+	private WebElement DeselectAWIZone;
+	public void clickonDeselectAWIZone()
+	{
+		DeselectAWIZone.click();
+	}
+	
+	//button[@title='Select Trade to Action']
+	@FindBy (xpath = "//button[@title='Select Trade to Action']")
+	private WebElement SelecttradetoAction;
+	public void clickonSelecttradetoAction()
+	{
+		SelecttradetoAction.click();
+	}
+	
+	//label[@class='checkbox']//input[@value='104']
+	@FindBy (xpath = "//label[@class='checkbox']//input[@value='104']")
+	private WebElement SelectNDTtradetoAction;
+	public void clickonSelectNDTtradetoAction()
+	{
+		SelectNDTtradetoAction.click();
+	}
+	
+	//button[@title='NDT']
+	@FindBy (xpath = "//button[@title='NDT']")
+	private WebElement DeSelectNDTtradetoAction;
+	public void clickonDeSelectNDTtradetoAction()
+	{
+		DeSelectNDTtradetoAction.click();
+	}
+	
+	//button[@id='btn_default_ok']
+	@FindBy (xpath = "//button[@id='btn_default_ok']")
+	private WebElement Applybutton;
+	public void clickonApplybutton()
+	{
+		Applybutton.click();
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	//td[contains(text(),'Edit')]
 	@FindBy (xpath = "//td[contains(text(),'Edit')]")
@@ -193,10 +271,12 @@ public class PccTaskAllocation
 	}
 	
 	//button[@id='btnsubmit']
-	@FindBy (xpath = "//button[@id='btnsubmit']")
+	@FindBy (id="btnsubmit")
 	private WebElement AllocateButton;
 	public void clickonAllocateButton()
 	{
+		
+		System.out.println(AllocateButton.isDisplayed());
 		AllocateButton.click();
 	}
 	
@@ -207,5 +287,9 @@ public class PccTaskAllocation
 	{
 		OkButton.click();
 	}
+	
+	
+	
+	
 	
 }

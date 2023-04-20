@@ -73,7 +73,7 @@ public class PccZoneAllocation
 		Workorder.click();
 	}
 	
-	@FindBy (xpath = "//label[normalize-space()='WPO-HSR-000191-0223']")
+	@FindBy (xpath = "//label[normalize-space()='WPO-HSR-000220-0423']")
 	private WebElement oneWorkorder;
 	public void selectoneworkorder()
 	{
@@ -253,7 +253,7 @@ public class PccZoneAllocation
 	}
 	
 	//ul[@class='multiselect-container dropdown-menu show']//input[@value='A00581']
-	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//input[@value='A00581']")
+	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//input[@value='A00945']")
 	private WebElement pickonepcccheckspok;
 	public void clickonepcccheckspoc()
 	{

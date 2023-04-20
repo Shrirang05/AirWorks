@@ -40,7 +40,7 @@ public class Createworkorderpage
 		planning.click();
 	}
 	
-	@FindBy (xpath = "//a[normalize-space()='Work Order']")
+	@FindBy (xpath = "//a[text()='Work Order']")
 	private WebElement workorder;
 	public void clickonworkorder()
 	{
@@ -160,7 +160,7 @@ public class Createworkorderpage
 	private WebElement plannedstartdate;
 	public void clickonplannedstartdate()
 	{
-		plannedstartdate.sendKeys("17-02-2023");
+		plannedstartdate.sendKeys("10-04-2023");
 	}
 	
 
@@ -168,14 +168,14 @@ public class Createworkorderpage
 	private WebElement plannedEnddate;
 	public void clickonplannedEnddate()
 	{
-		plannedEnddate.sendKeys("19-02-2023");
+		plannedEnddate.sendKeys("20-04-2023");
 	}
 	
 	@FindBy (xpath = "//input[@id='txtActStartDate']")
 	private WebElement Actualstartdate;
 	public void clickonActualstartdate()
 	{
-		Actualstartdate.sendKeys("17-02-2023");
+		Actualstartdate.sendKeys("14-04-2023");
 	}
 	//span[normalize-space()='Select Planning Check SPOC']
 	//button[@title='Select Planning Check SPOC']
@@ -243,8 +243,8 @@ public class Createworkorderpage
 		Maintainancedata.click();
 	}
 	
-	
-	@FindBy (xpath = "//span[normalize-space()='Select Task Type']")
+	//span[normalize-space()='Select Task Type']
+	@FindBy (xpath ="//button[@title='Select Task Type']")
 	private WebElement Tasktype;
 	public void SelecttheTasktype()
 	{
@@ -288,11 +288,19 @@ public class Createworkorderpage
 	
 	@FindBy (xpath = "//input[@id='txtMDFromDate']")
 	private WebElement MDfromdate;
-	public void SelecttheMDfromdate()
+	public void SelecttheMDfromdate() throws InterruptedException
 	{
-//		MDfromdate.click();
+		
+		MDfromdate.click();
+		Thread.sleep(2000);
 //		MDfromdate.clear();
-		MDfromdate.sendKeys("18-02-2023");
+//		Thread.sleep(2000);
+//		for (int i=1;i<=10;i++)
+//		{
+//			Act.sendKeys(Keys.BACK_SPACE);
+//			Thread.sleep(2000);
+//		}
+//		MDfromdate.sendKeys("18-02-2023");
 //		MDfromdate.click();
 	}
 	
@@ -312,11 +320,18 @@ public class Createworkorderpage
 	
 	@FindBy (xpath = "//input[@id='txtMDFromTo']")
 	private WebElement MaintainanceEnddate;
-	public void SelecttheMaintainanceEnddate()
+	public void SelecttheMaintainanceEnddate() throws InterruptedException
 	{
-//		MaintainanceEnddate.click();
-//		MaintainanceEnddate.clear();
-		MaintainanceEnddate.sendKeys("19-02-2023");
+		
+		MaintainanceEnddate.click();
+		
+//		for (int i=1;i<=10;i++)
+//		{
+//			Act.sendKeys(Keys.BACK_SPACE);
+//		}
+//		Act.sendKeys(Keys.BACK_SPACE);
+		Thread.sleep(2000);
+//		MaintainanceEnddate.sendKeys("19-02-2023");
 	}
 	
 	
@@ -483,6 +498,15 @@ public class Createworkorderpage
     }
     
     
+    
+    
+  //i[@class='fa fa-bars']
+    @FindBy (xpath = "//i[@class='fa fa-bars']")
+    private WebElement Menubutton;
+    public void clickonMenubutton()
+    {
+    	 Menubutton.click();
+    }
     
 
        

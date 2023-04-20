@@ -4,6 +4,10 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="testpack.TC03_CreateWorkorderSheet"/>
+      <class name="testpack.TC04_Editworkordersheet"/>
+      <class name="testpack.TC05_VerifyZoneAllocationpage"/>
+      <class name="testpack.TC06_VerifyTaskAllocation"/>
+      <class name="testpack.TC06_01_VerifyAuthorizedWorkorder"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

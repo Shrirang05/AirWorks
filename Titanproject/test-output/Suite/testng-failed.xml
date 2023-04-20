@@ -3,6 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testpack.TC06_VerifyTaskAllocation">
+        <methods>
+          <include name="tearDown"/>
+          <include name="SetUp"/>
+          <include name="VerifyZoneAllocationpage"/>
+        </methods>
+      </class> <!-- testpack.TC06_VerifyTaskAllocation -->
       <class name="testpack.TC03_CreateWorkorderSheet">
         <methods>
           <include name="tearDown"/>
@@ -10,6 +17,13 @@
           <include name="verifyAMRObutton"/>
         </methods>
       </class> <!-- testpack.TC03_CreateWorkorderSheet -->
+      <class name="testpack.TC06_01_VerifyAuthorizedWorkorder">
+        <methods>
+          <include name="VerifyAuthorizedWorkorder"/>
+          <include name="tearDown"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- testpack.TC06_01_VerifyAuthorizedWorkorder -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
