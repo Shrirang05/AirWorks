@@ -73,7 +73,7 @@ public class PccZoneAllocation
 		Workorder.click();
 	}
 	
-	@FindBy (xpath = "//label[normalize-space()='WPO-HSR-000220-0423']")
+	@FindBy (xpath = "//label[normalize-space()='WPO-HSR-000229-0423']")
 	private WebElement oneWorkorder;
 	public void selectoneworkorder()
 	{
@@ -193,8 +193,11 @@ public class PccZoneAllocation
 	@FindBy (xpath = "//input[@id='txtArrivalDate']")
 	private WebElement Arrivaldate;
 	public void  clickonArrivaldate()
-	{
+	{   
 		Arrivaldate.click();
+//		Arrivaldate.clear();
+//		Arrivaldate.sendKeys("23-04-2023");
+		
 	}
 	
 	//input[@id='txtStartDate']
@@ -245,7 +248,8 @@ public class PccZoneAllocation
 	}
 	
 	//body[1]/div[1]/div[1]/div[5]/div[3]/div[5]/span[1]/div[1]/button[1]
-	@FindBy (xpath = "//body[1]/div[1]/div[1]/div[5]/div[3]/div[5]/span[1]/div[1]/button[1]")
+	@FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/div[5]/div[3]/div[5]/span[1]/div[1]/button[1]")
+	                  
 	private WebElement pcccheckspok;
 	public void clickonpcccheckspoc()
 	{

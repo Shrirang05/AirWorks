@@ -49,7 +49,7 @@ public class Editworkorderpage
 	private WebElement workorderno;
 	public void Passingworkorderno()
 	{
-		workorderno.sendKeys("WPO-HSR-000220-0423");
+		workorderno.sendKeys("WPO-HSR-000229-0423");
 	}
 	
 	//input[@id='txtTypeCheck']
@@ -102,7 +102,7 @@ public class Editworkorderpage
 	
 //	WPO-HSR-000190-0223
 //	div[@title='WPO-HSR-000187-0223']
-	@FindBy (xpath = "//div[@title='WPO-HSR-000220-0423']")
+	@FindBy (xpath = "//div[@title='WPO-HSR-000229-0423']")
 	private WebElement selectworkorder;
 	public void clickonworkordertoedit()
 	{
@@ -166,7 +166,7 @@ public class Editworkorderpage
 	public void clickonplannedstartdate()
 	{
 		plannedstartdate.clear();
-		plannedstartdate.sendKeys("13-04-2023");
+		plannedstartdate.sendKeys("21-04-2023");
 	}
 	
 
@@ -183,7 +183,7 @@ public class Editworkorderpage
 	public void clickonActualstartdate()
 	{
 		Actualstartdate.clear();
-		Actualstartdate.sendKeys("15-04-2023");
+		Actualstartdate.sendKeys("23-04-2023");
 	}
 	
 	//button[@id='btnWorkOrderConfirm']

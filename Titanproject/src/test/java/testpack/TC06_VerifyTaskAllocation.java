@@ -42,18 +42,18 @@ public class TC06_VerifyTaskAllocation extends Testbaseclass
 		PC.selectoneworkorder();
 		log.info("select one work order");
 		  Thread.sleep(1000);
-		PT.clickonfindingfromtask();
-		log.info("Click on finding from task");
-		  Thread.sleep(1000);
-		PT.clickonfindingfromtask();
-		log.info("Click on finding from task");
-		  Thread.sleep(1000);
-		PT.clickonATA();
-		log.info("Click on ATA");
-		  Thread.sleep(1000);
-		PT.clickonATAselect();
-		log.info("Click on ATA Select");
-		  Thread.sleep(1000);
+//		PT.clickonfindingfromtask();
+//		log.info("Click on finding from task");
+//		  Thread.sleep(1000);
+//		PT.clickonfindingfromtask();
+//		log.info("Click on finding from task");
+//		  Thread.sleep(1000);
+//		PT.clickonATA();
+//		log.info("Click on ATA");
+//		  Thread.sleep(1000);
+//		PT.clickonATAselect();
+//		log.info("Click on ATA Select");
+//		  Thread.sleep(1000);
 		PT.clickonAWIzone(); 
 		log.info("Click on AWI zone");
 		Thread.sleep(1000);
@@ -81,22 +81,31 @@ public class TC06_VerifyTaskAllocation extends Testbaseclass
 		  
 		  
 		  PT.clickonDefaultInputs();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonAWIZoneselect();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonAWIZonecabin();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonAWIZoneEmpennage();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonDeselectAWIZone();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonSelecttradetoAction();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonSelectNDTtradetoAction();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonDeSelectNDTtradetoAction();
+		  Thread.sleep(1000);
 		  
 		  PT.clickonApplybutton();
+		  Thread.sleep(1000);
 		  
 		  
 		  

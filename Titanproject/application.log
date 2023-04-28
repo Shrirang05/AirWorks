@@ -1,55 +1,28 @@
-2023-04-18 17:44:19,269  INFO [main] Titan:39 - clickonsignINbutton
-2023-04-18 17:44:22,456  INFO [main] Titan:43 - Send username
-2023-04-18 17:44:25,555  INFO [main] Titan:49 - Click on next button
-2023-04-18 17:44:28,723  INFO [main] Titan:54 - Send Password
-2023-04-18 17:44:32,391  INFO [main] Titan:59 - MS sign in
-2023-04-18 17:44:38,391  INFO [main] Titan:64 - Click on yes button
-2023-04-18 17:44:40,280  INFO [main] Titan:35 - click on AMRO button
-2023-04-18 17:44:46,937  INFO [main] Titan:351 - click on PCC
-2023-04-18 17:44:49,073  INFO [main] Titan:354 - click on Basecheck
-2023-04-18 17:45:00,242  INFO [main] Titan:469 - click on Task Allocation
-2023-04-18 17:45:01,567  INFO [main] Titan:472 - click on Aircraft Regn.
-2023-04-18 17:45:02,838  INFO [main] Titan:475 - click on BTTB
-2023-04-18 17:45:04,376  INFO [main] Titan:478 - select work order
-2023-04-18 17:45:05,595  INFO [main] Titan:481 - select one work order
-2023-04-18 17:45:07,325  INFO [main] Titan:484 - Click on finding from task
-2023-04-18 17:45:08,479  INFO [main] Titan:487 - Click on finding from task
-2023-04-18 17:45:09,745  INFO [main] Titan:490 - Click on ATA
-2023-04-18 17:45:10,968  INFO [main] Titan:493 - Click on ATA Select
-2023-04-18 17:45:12,489  INFO [main] Titan:496 - Click on AWI zone
-2023-04-18 17:45:13,737  INFO [main] Titan:499 - select one AWI zone
-2023-04-18 17:45:15,467  INFO [main] Titan:502 - Click on Trade to Action
-2023-04-18 17:45:16,794  INFO [main] Titan:505 - Click on Trade to Action B1
-2023-04-18 17:45:19,416  INFO [main] Titan:508 - Click on AME1
-2023-04-18 17:45:20,919  INFO [main] Titan:511 - Click on particular AME1
-2023-04-18 17:45:22,215  INFO [main] Titan:514 - Click on Search Button
-2023-04-18 17:45:23,481  INFO [main] Titan:517 - Select one grid
-2023-04-18 17:45:24,851  INFO [main] Titan:520 - Click on Edit Button
-2023-04-18 17:45:26,363  INFO [main] Titan:523 - Click on 1st day in the grid
-2023-04-18 17:45:27,822  INFO [main] Titan:526 - Click on Edit Button
-2023-04-18 17:45:29,638  INFO [main] Titan:529 - Click on 2nd grid
-2023-04-18 17:45:30,990  INFO [main] Titan:532 - Click on Edit Button
-2023-04-18 17:45:32,650  INFO [main] Titan:535 - Click on 2nd day in the grid
-2023-04-18 17:45:33,996  INFO [main] Titan:538 - Click on Edit button
-2023-04-18 17:45:35,558  INFO [main] Titan:541 - Click on third grid
-2023-04-18 17:45:36,883  INFO [main] Titan:544 - Click on Edit button
-2023-04-18 17:45:38,398  INFO [main] Titan:547 - Click on third day in the grid
-2023-04-18 17:45:39,908  INFO [main] Titan:550 - Click on Edit button
-2023-04-18 17:45:41,427  INFO [main] Titan:553 - Click on fourth grid
-2023-04-18 17:45:42,997  INFO [main] Titan:556 - Click on Edit button
-2023-04-18 17:45:44,267  INFO [main] Titan:559 - Click on fourth day in the grid
-2023-04-18 17:45:45,743  INFO [main] Titan:562 - Click on Edit button
-2023-04-18 17:45:47,614  INFO [main] Titan:577 - Click on Allocate button
-2023-04-18 17:45:49,924  INFO [main] Titan:580 - Click on ok button
-2023-04-18 17:45:54,593  INFO [main] Titan:589 - Click on planning button
-2023-04-18 17:45:56,896  INFO [main] Titan:592 - Click on Work order
-2023-04-18 17:46:01,312  INFO [main] Titan:595 - Click on Authorized work order
-2023-04-18 17:46:03,622  INFO [main] Titan:598 - passing work order no.
-2023-04-18 17:46:05,940  INFO [main] Titan:601 - Click on Aircraft Reg.
-2023-04-18 17:46:06,134  INFO [main] Titan:603 - Select Type of check
-2023-04-18 17:46:06,325  INFO [main] Titan:605 - Select customer for Reg. Aircraft
-2023-04-18 17:46:06,560  INFO [main] Titan:607 - Select customer for Reg. Aircraft as BBAM
-2023-04-18 17:46:06,775  INFO [main] Titan:609 - Select the station
-2023-04-18 17:46:08,908  INFO [main] Titan:612 - Select coachin as station
-2023-04-18 17:46:11,034  INFO [main] Titan:615 - De select station
-2023-04-18 17:46:11,135  INFO [main] Titan:617 - Click on search button
+2023-04-28 13:00:39,466  INFO [main] Titan:39 - clickonsignINbutton
+2023-04-28 13:00:42,717  INFO [main] Titan:43 - Send username
+2023-04-28 13:00:45,871  INFO [main] Titan:49 - Click on next button
+2023-04-28 13:00:49,014  INFO [main] Titan:54 - Send Password
+2023-04-28 13:00:52,570  INFO [main] Titan:59 - MS sign in
+2023-04-28 13:00:58,940  INFO [main] Titan:64 - Click on yes button
+2023-04-28 13:01:01,480  INFO [main] Titan:21 - click on GAMRO button
+2023-04-28 13:01:04,177  INFO [main] Titan:24 - click on Quality button
+2023-04-28 13:01:07,280  INFO [main] Titan:27 - click on Non confermance report
+2023-04-28 13:01:11,287  INFO [main] Titan:30 - click on View Non confermance report
+2023-04-28 13:01:13,413  INFO [main] Titan:33 - click on Area of Audit
+2023-04-28 13:01:13,538  INFO [main] Titan:35 - click on Area of Audit CAMO
+2023-04-28 13:01:13,695  INFO [main] Titan:37 - Select date of Audit going for Edit
+2023-04-28 13:01:15,848  INFO [main] Titan:40 - Click on place of audit
+2023-04-28 13:01:15,995  INFO [main] Titan:42 - Select place of audit Hosur
+2023-04-28 13:01:16,088  INFO [main] Titan:44 - click on select status
+2023-04-28 13:01:16,235  INFO [main] Titan:46 - Select status as draft
+2023-04-28 13:01:16,341  INFO [main] Titan:48 - Click on search button
+2023-04-28 13:01:16,765  INFO [main] Titan:50 - Select first grid to go for Edit
+2023-04-28 13:01:18,045  INFO [main] Titan:53 - Click on Edit button
+2023-04-28 13:01:18,195  INFO [main] Titan:56 - Landed on Edit NCR screen
+2023-04-28 13:01:18,448  INFO [main] Titan:72 - Click on Name of Auditees for Edit
+2023-04-28 13:01:20,564  INFO [main] Titan:75 - Click on change the name of Auditees for Edit
+2023-04-28 13:01:22,964  INFO [main] Titan:79 - click on Edit Scope of audit
+2023-04-28 13:01:23,343  INFO [main] Titan:81 - Passing the Change Level of finding
+2023-04-28 13:01:23,534  INFO [main] Titan:84 - click on date of target for edit
+2023-04-28 13:01:23,924  INFO [main] Titan:86 - Click on root cause of diff for edit
+2023-04-28 13:01:24,329  INFO [main] Titan:89 - Click on Edit Non conformance details

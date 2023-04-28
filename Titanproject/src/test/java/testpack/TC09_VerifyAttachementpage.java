@@ -40,15 +40,16 @@ public class TC09_VerifyAttachementpage extends Testbaseclass
 		NC.clickonAreaofAuditCAMO();
 		log.info("clickonAreaofAuditCAMO");
 		Thread.sleep(1000);
-		NC.clickonDateofAudit();
+		NC.clickonDateofAuditgoingforEdit();
 		log.info("clickonDateofAudit");
 		Thread.sleep(1000);
 		NC.clickonPlaceofAudit();
 		log.info("clickonPlaceofAudit");
 		Thread.sleep(1000);
 		 
-		NC.clickonPlaceofAuditNoida();
-		Thread.sleep(2000);
+		 NC.clickonPlaceofAuditHosur();
+    	 log.info("click on Place of Audit Hosur");
+		 Thread.sleep(2000);
 //		boolean v = NC.palceofAuditvalidation("GURGAON");
 //		System.out.println(v);
 //		Assert.assertTrue(v);
@@ -65,7 +66,7 @@ public class TC09_VerifyAttachementpage extends Testbaseclass
 		NC.clickonSelectfirstgrid();
 		 Thread.sleep(1000);
 		NC.clickonAttachmentButton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		NC.clickonDocumentlevelfileupload();
 		Thread.sleep(3000);
 		NC.clickonDocumentCategory();

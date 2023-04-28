@@ -160,7 +160,7 @@ public class Createworkorderpage
 	private WebElement plannedstartdate;
 	public void clickonplannedstartdate()
 	{
-		plannedstartdate.sendKeys("10-04-2023");
+		plannedstartdate.sendKeys("20-04-2023");
 	}
 	
 
@@ -168,14 +168,14 @@ public class Createworkorderpage
 	private WebElement plannedEnddate;
 	public void clickonplannedEnddate()
 	{
-		plannedEnddate.sendKeys("20-04-2023");
+		plannedEnddate.sendKeys("30-04-2023");
 	}
 	
 	@FindBy (xpath = "//input[@id='txtActStartDate']")
 	private WebElement Actualstartdate;
 	public void clickonActualstartdate()
 	{
-		Actualstartdate.sendKeys("14-04-2023");
+		Actualstartdate.sendKeys("21-04-2023");
 	}
 	//span[normalize-space()='Select Planning Check SPOC']
 	//button[@title='Select Planning Check SPOC']
@@ -292,7 +292,7 @@ public class Createworkorderpage
 	{
 		
 		MDfromdate.click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 //		MDfromdate.clear();
 //		Thread.sleep(2000);
 //		for (int i=1;i<=10;i++)
@@ -330,7 +330,7 @@ public class Createworkorderpage
 //			Act.sendKeys(Keys.BACK_SPACE);
 //		}
 //		Act.sendKeys(Keys.BACK_SPACE);
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 //		MaintainanceEnddate.sendKeys("19-02-2023");
 	}
 	
@@ -390,7 +390,7 @@ public class Createworkorderpage
     
     @FindBy (xpath = "//a[@title='Search Task']")
    	private WebElement Magnifier;
-       public void clickonMagnifierglass()
+    public void clickonMagnifierglass()
    	{
     	   Magnifier.click();
    	}

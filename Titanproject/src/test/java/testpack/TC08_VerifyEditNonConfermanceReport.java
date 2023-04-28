@@ -2,6 +2,7 @@ package testpack;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pompack.NonConfermenceReport;
@@ -51,10 +52,22 @@ public void VerifyEditNonConfermanceReport() throws InterruptedException, IOExce
 	 ENC.clickonEditbutton();
 	 log.info("Click on Edit button");
 	 
+	 Assert.assertTrue(ENC.EditNCRvalidation());
+	 log.info("Landed on Edit NCR screen");
+	
 //	 ENC.clickonDateofAuditforEdit();
 //	 ENC.clickonHosurplaceofaudit();
 //	 ENC.clickonAHMEDABADplaceofaudit();
 //	 Thread.sleep(2000);
+	 
+	  boolean v = ENC.validateAreaofauditCAMO("CAMO");
+		System.out.println(v);
+		Assert.assertTrue(v);
+		
+		
+	 boolean p = ENC.validateEditchecklistNo();
+	 System.out.println(p);	
+	 
 	 ENC.ClickonNameofAuditeesforEdit();
 	 log.info("Click on Name of Auditees for Edit");
 	 Thread.sleep(2000);
@@ -94,31 +107,42 @@ public void VerifyEditNonConfermanceReport() throws InterruptedException, IOExce
 	 log.info("click on Name of Dept Manager for Edit");
 	 Thread.sleep(5000);
 	 ENC.clickonchangetheNameofDeptManagerforEdit();
+	 log.info("click on change the Name of Dept Manager for Edit");
+	 
 	 Thread.sleep(7000);
 	 
 	 Utilityclass.getScreenshot(driver, "SS half page");
 	 
 	 ENC.ClickonEditFinalAuditManager();
+	 log.info("Click on Edit Final Audit Manager");
 	 Thread.sleep(5000);
 	 ENC.clickonchangethedateforFinalManager();
+	 log.info("click on change the date for Final Manager");
 	 Thread.sleep(5000);
 	 
 	 ENC.clickonFinalAccepatancebyqualityManager();
+	 log.info("click on Final Accepatance by quality Manager");
 	 Thread.sleep(5000);
 	 ENC.clickonchangeFinalAccepatanceQualityManager();
+	 log.info("click on change Final Accepatance Quality Manager");
 	 Thread.sleep(5000);
 	 ENC.clickonchangeNameofQualityManager();
+	 log.info("click on change Name of Quality Manager");
 	 Thread.sleep(5000);
 	 ENC.clickonchangethedateforQualityManager();
+	 log.info("click on change the date for Quality Manager");
 	
 	 Utilityclass.getScreenshot(driver, "SS Full page");
 	 
 	 Thread.sleep(5000);
 	 ENC.clickonUpdateButton();
+	 log.info("click on Update Button");
 	 Thread.sleep(5000);
 	 ENC.clickonokButton();
+	 log.info("click on Ok Button");
 	 Thread.sleep(5000);
 	 ENC.clickonBackButton();
+	 log.info("click on Back Button");
 	 Thread.sleep(5000);
 	 
 	 

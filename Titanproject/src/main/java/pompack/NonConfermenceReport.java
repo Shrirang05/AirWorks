@@ -498,6 +498,18 @@ public class NonConfermenceReport
 	//Going for Edit
 	//After going to save ADD NCR details going again to home page and search for that particular added NCR
 	
+	//span[@id='select2-ddlAreaOfAudit-container']
+	@FindBy (xpath = "//span[@id='select2-ddlAreaOfAudit-container']")
+	private WebElement CheckforareaofAudit;
+	public boolean validateAreaofauditCAMO (String ActualText )
+	{
+        String ExpectedText = CheckforareaofAudit.getText();
+    	
+    	return ExpectedText.equals(ActualText);
+	}
+	
+	
+	
 	//input[@value='13']
 	//input[@id='txtAuditFromdate']
 	@FindBy (xpath = "//input[@id='txtAuditFromdate']")
@@ -530,6 +542,16 @@ public class NonConfermenceReport
 		return EditNCRvalidation.isDisplayed();
 		
 	}
+	//input[@id='txtChecklistNo']
+	
+	@FindBy (xpath = "//input[@id='txtChecklistNo']")
+	private WebElement checkEditchecklistNo;
+	public boolean validateEditchecklistNo()
+	{
+		return checkEditchecklistNo.isEnabled();
+		
+	}
+	
 	
 	@FindBy (xpath = "//input[@id='txtAuditdate']")
 	private WebElement DateofAuditforEdit;
@@ -755,7 +777,7 @@ public class NonConfermenceReport
 	private WebElement DateofAuditforEditforHomePage;
 	public void clickonDateofAuditforEditforHomePage()
 	{
-		DateofAuditforEditforHomePage.sendKeys("05022023");
+		DateofAuditforEditforHomePage.sendKeys("03022023");
 	}
 	
 	//button[@title='Select Place Of Audit']
@@ -799,9 +821,8 @@ public class NonConfermenceReport
 //			s.selectByIndex(0);
 		}
 		
-		//span[@id='select2-ddl_DocumentCategory-container']
-		//li[@id='select2-ddl_DocumentCategory-result-g22m-1622']
-		@FindBy (xpath = "//li[@id='select2-ddl_DocumentCategory-result-97xi-1622']")
+		
+		@FindBy (xpath = "//li[text()='Non Conformance Report']")
 		private WebElement DocumentCategoryNCR ;
 		public void clickonDocumentCategoryNCR()
 		{

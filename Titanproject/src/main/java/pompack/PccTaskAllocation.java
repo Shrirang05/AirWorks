@@ -1,5 +1,6 @@
 package pompack;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -289,6 +290,21 @@ public class PccTaskAllocation
 	}
 	
 	
+	
+	
+	
+	
+	
+	
+	  @FindBy (xpath = "//i[@class='fa fa-bars']")
+	    private WebElement Menubuttonforscrolling;
+	    public void clickonMenubuttonforscrollingthepage() throws InterruptedException
+	    {
+	    	Menubuttonforscrolling.click();
+	    	Thread.sleep(1000);
+	    	JavascriptExecutor js = (JavascriptExecutor) driver;
+	    	js.executeScript("window.scrollBy(0,1000)");
+	    }
 	
 	
 	

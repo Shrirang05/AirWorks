@@ -228,7 +228,7 @@ public class TC12_Workflowforworkorder extends Testbaseclass
         Thread.sleep(2000);
        
         
-          AM.clickonMenubutton();
+          PT.clickonMenubuttonforscrollingthepage();
           Thread.sleep(2000);
           
      //Edit work order started
@@ -480,18 +480,18 @@ public class TC12_Workflowforworkorder extends Testbaseclass
  		PC.selectoneworkorder();
  		log.info("select one work order");
  		  Thread.sleep(1000);
- 		PT.clickonfindingfromtask();
- 		log.info("Click on finding from task");
- 		  Thread.sleep(1000);
- 		PT.clickonfindingfromtask();
- 		log.info("Click on finding from task");
- 		  Thread.sleep(1000);
- 		PT.clickonATA();
- 		log.info("Click on ATA");
- 		  Thread.sleep(1000);
- 		PT.clickonATAselect();
- 		log.info("Click on ATA Select");
- 		  Thread.sleep(1000);
+// 		PT.clickonfindingfromtask();
+// 		log.info("Click on finding from task");
+// 		  Thread.sleep(1000);
+// 		PT.clickonfindingfromtask();
+// 		log.info("Click on finding from task");
+// 		  Thread.sleep(1000);
+// 		PT.clickonATA();
+// 		log.info("Click on ATA");
+// 		  Thread.sleep(1000);
+// 		PT.clickonATAselect();
+// 		log.info("Click on ATA Select");
+// 		  Thread.sleep(1000);
  		PT.clickonAWIzone(); 
  		log.info("Click on AWI zone");
  		Thread.sleep(1000);
@@ -580,7 +580,7 @@ public class TC12_Workflowforworkorder extends Testbaseclass
          log.info("Click on ok button");
          Thread.sleep(2000);
          
-         AM.clickonMenubutton();
+         PT.clickonMenubuttonforscrollingthepage();
          Thread.sleep(2000);
          
          //Authorize work order started
@@ -633,10 +633,10 @@ public class TC12_Workflowforworkorder extends Testbaseclass
      	log.info("Click on proceedbutton");
          
          
-         EW.clickonAcceptworkorder();
-         log.info("Accept the Authorized work order");
+        EW.clickonAcceptworkorder();
+        log.info("Accept the Authorized work order");
           
-          
+         
           
           
           
