@@ -10,7 +10,7 @@ import pompack.Editworkorderpage;
 import pompack.PccTaskAllocation;
 import pompack.PccZoneAllocation;
 
-public class TC06_01_VerifyAuthorizedWorkorder extends Testbaseclass
+public class TC06_01_VerifyAuthorizedWorkorder extends TestBaseClassPreServer
 {
 	private Createworkorderpage AM;
 	private PccZoneAllocation PC;
@@ -71,20 +71,22 @@ public class TC06_01_VerifyAuthorizedWorkorder extends Testbaseclass
        
         AW.clickoncheckbox();
         log.info("Click on Checkbox");
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         
     	AW.clickonAuthorizebutton();
     	log.info("Click on Authorize button");
-    	  Thread.sleep(2000);
+    	  Thread.sleep(5000);
     	AW.clickonproceedbutton();
-    	log.info("Click on proceedbutton");
-    	  Thread.sleep(2000);
+    	log.info("Click on proceed button");
+    	  Thread.sleep(10000);
     	
        EW.clickonAcceptworkorder();
        log.info("Click on ok button");
-       Thread.sleep(2000);
+       Thread.sleep(10000);
     	
-    	 
+    	 AW.clickonworkorderfetching();
+    	 log.info("Authorize work order No. printed");
+         Thread.sleep(10000);
     	
 		
 		

@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpack.TC08_VerifyEditNonConfermanceReport">
+      <class name="testpack.TC18_03_VerifyCloseWorkOrder3rdTask">
         <methods>
-          <include name="tearDown"/>
+          <include name="VerifyViewCloseWorkOrder"/>
           <include name="SetUp"/>
-          <include name="VerifyEditNonConfermanceReport"/>
         </methods>
-      </class> <!-- testpack.TC08_VerifyEditNonConfermanceReport -->
+      </class> <!-- testpack.TC18_03_VerifyCloseWorkOrder3rdTask -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

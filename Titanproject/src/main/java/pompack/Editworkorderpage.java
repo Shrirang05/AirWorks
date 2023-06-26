@@ -1,5 +1,6 @@
 package pompack;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -8,7 +9,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilpack.propReader;
+
 public class Editworkorderpage 
+
 {
 	private WebDriver driver;
 	private Actions Act;
@@ -46,18 +50,28 @@ public class Editworkorderpage
 	
 //	WPO-HSR-000187-0223
 	@FindBy (xpath = "//input[@id='txtWoNo']")
-	private WebElement workorderno;
+	private WebElement workordernoforedit;
 	public void Passingworkorderno()
 	{
-		workorderno.sendKeys("WPO-HSR-000229-0423");
+		workordernoforedit.sendKeys(Createworkorderpage.WorkOrderNo);
 	}
 	
 	//input[@id='txtTypeCheck']
 	@FindBy (xpath = "//input[@id='txtTypeCheck']")
 	private WebElement typeofcheck;
-	public void Passingtypeofcheck()
+	public void Passingtypeofcheck() throws IOException
 	{
-		typeofcheck.sendKeys("1C CHECK");
+//		typeofcheck.sendKeys("1C CHECK");
+		typeofcheck.sendKeys(propReader.ExcelStringValueReader("data",13,1));
+	}
+	
+	@FindBy (xpath = "//input[@id='txtCustWorkPkgNo']")
+	private WebElement Customerworkorderno;
+	public void passingtheCustomerworkordernoforEdit() throws IOException
+	{
+		Customerworkorderno.clear();
+//		Customerworkorderno.sendKeys("Test@123"); 
+		Customerworkorderno.sendKeys(propReader.ExcelStringValueReader("data",14,1));
 	}
 	
 	//span[normalize-space()='Select Customer']
@@ -102,7 +116,7 @@ public class Editworkorderpage
 	
 //	WPO-HSR-000190-0223
 //	div[@title='WPO-HSR-000187-0223']
-	@FindBy (xpath = "//div[@title='WPO-HSR-000229-0423']")
+	@FindBy (xpath = "//div[contains(text(),'WPO-HSR-000')]")
 	private WebElement selectworkorder;
 	public void clickonworkordertoedit()
 	{
@@ -161,12 +175,24 @@ public class Editworkorderpage
 		SelectStation.click();
 	}
 	
+	
+	
+	
+	@FindBy (xpath = "//input[@id='txtSeries']")
+	private WebElement Series;
+	public void passingtheseriesforedit() throws IOException
+	{
+		Series.clear();
+//		Series.sendKeys("3456");
+		Series.sendKeys(propReader.ExcelIntValueReader("data",15,1));
+	}
+	
 	@FindBy (xpath = "//input[@id='txtPndStDate']")
 	private WebElement plannedstartdate;
 	public void clickonplannedstartdate()
 	{
 		plannedstartdate.clear();
-		plannedstartdate.sendKeys("21-04-2023");
+		plannedstartdate.sendKeys("04-05-2023");
 	}
 	
 
@@ -175,7 +201,7 @@ public class Editworkorderpage
 	public void clickonplannedEnddate()
 	{
 		plannedEnddate.clear();
-		plannedEnddate.sendKeys("30-04-2023");
+		plannedEnddate.sendKeys("30-05-2023");
 	}
 
 	@FindBy (xpath = "//input[@id='txtActStartDate']")
@@ -183,7 +209,7 @@ public class Editworkorderpage
 	public void clickonActualstartdate()
 	{
 		Actualstartdate.clear();
-		Actualstartdate.sendKeys("23-04-2023");
+		Actualstartdate.sendKeys("06-05-2023");
 	}
 	
 	//button[@id='btnWorkOrderConfirm']

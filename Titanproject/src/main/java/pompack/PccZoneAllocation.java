@@ -1,5 +1,7 @@
 package pompack;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -73,11 +75,22 @@ public class PccZoneAllocation
 		Workorder.click();
 	}
 	
-	@FindBy (xpath = "//label[normalize-space()='WPO-HSR-000229-0423']")
-	private WebElement oneWorkorder;
+	//input[@value='WPO-HSR-000250-0523']
+	
+//	String WO = "//input[@value='"+Createworkorderpage.WorkOrderNo+"']";
+//	@FindBy (xpath = "WO")
+//	private WebElement oneWorkorder;
+//	public void selectoneworkorder()
+//	{
+//		oneWorkorder.click();
+//		syso
+//	}
+	
+	@FindBy (css = "ul[class = 'multiselect-container dropdown-menu show'] li")
+	private List<WebElement> oneWorkorder;
 	public void selectoneworkorder()
 	{
-		oneWorkorder.click();
+		oneWorkorder.get(oneWorkorder.size()-1).click();
 	}
 	
 	//button[normalize-space()='Search']
@@ -112,7 +125,7 @@ public class PccZoneAllocation
 	}
 	
 
-	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//input[@value='G00210']")
+	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//input[@value='TGUR91']")
 	private WebElement selectoneAME;
 	public void  clickononeAME()
 	{

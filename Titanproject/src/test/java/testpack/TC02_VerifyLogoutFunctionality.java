@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import pompack.Loginpomclass;
 import utilpack.Utilityclass;
 
-public class TC02_VerifyLogoutFunctionality extends Testbaseclass
+public class TC02_VerifyLogoutFunctionality extends TestBaseClassPreServer
 {
 	private Loginpomclass LO;
 	

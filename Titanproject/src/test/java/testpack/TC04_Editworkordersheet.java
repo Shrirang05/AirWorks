@@ -1,5 +1,6 @@
 package testpack;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,12 +10,12 @@ import org.testng.annotations.Test;
 import pompack.Createworkorderpage;
 import pompack.Editworkorderpage;
 
-public class TC04_Editworkordersheet extends Testbaseclass
+public class TC04_Editworkordersheet extends TestBaseClassPreServer
 {
 	private Createworkorderpage AM;
 	private Editworkorderpage EW;
 	@Test
-	public void VerifyEditworkorder() throws InterruptedException
+	public void VerifyEditworkorder() throws InterruptedException, IOException
 	{
 		
 		AM = new Createworkorderpage(driver);
@@ -94,7 +95,7 @@ public class TC04_Editworkordersheet extends Testbaseclass
         EW.clickoneTypeofcheck();
         log.info("click one Type of check");
         Thread.sleep(2000);
-        AM.passingtheCustomerworkorderno();
+        EW.passingtheCustomerworkordernoforEdit();
         log.info("passing the Customer work order no");
         Thread.sleep(2000);
         EW.clickonplannedstartdate();
@@ -128,7 +129,7 @@ public class TC04_Editworkordersheet extends Testbaseclass
         AM.SelectBaseMaintainance();
         log.info("Select Base maintainance");
         Thread.sleep(2000);
-        AM.passingtheseries();
+        EW.passingtheseriesforedit();
         log.info("Passing the series");
         Thread.sleep(2000);
         

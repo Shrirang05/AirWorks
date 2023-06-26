@@ -6,7 +6,7 @@ import pompack.Createworkorderpage;
 import pompack.PccTaskAllocation;
 import pompack.PccZoneAllocation;
 
-public class TC06_VerifyTaskAllocation extends Testbaseclass
+public class TC06_VerifyTaskAllocation extends TestBaseClassPreServer
 {
 	private Createworkorderpage AM;
 	private PccZoneAllocation PC;

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import pompack.Createworkorderpage;
 import pompack.PccZoneAllocation;
 
-public class TC05_VerifyZoneAllocationpage extends Testbaseclass
+public class TC05_VerifyZoneAllocationpage extends TestBaseClassPreServer
 {
 	private Createworkorderpage AM;
 	private PccZoneAllocation PC;

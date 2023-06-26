@@ -11,10 +11,10 @@ import org.testng.annotations.Test;
 import pompack.NonConfermenceReport;
 import utilpack.Utilityclass;
 
-public class TC10_VerifyNonConfermanceReportFinal extends Testbaseclass
+public class TC10_VerifyNonConfermanceReportFinal extends TestBaseClassStagServer
 {
 	private NonConfermenceReport NC;
-//	Logger log = Logger.getLogger("Titan");
+
      @Test
      public void VerifyNonConfermanceReportFinal() throws InterruptedException, IOException 
  	{

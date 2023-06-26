@@ -1,9 +1,13 @@
 package pompack;
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import utilpack.propReader;
 
 public class Loginpomclass 
 {
@@ -20,9 +24,10 @@ public class Loginpomclass
 	@FindBy(xpath="//*[@id='i0116']")
 	private WebElement Username;
 	
-	public void sendusername()
+	public void sendusername() throws IOException
 	{
-		Username.sendKeys("shrirang.ladda@airworks.in");
+		Username.sendKeys(propReader.ExcelStringValueReader("data",1,1));
+//		Username.sendKeys("shrirang.ladda@airworks.in");
 	}
 	
 	@FindBy(xpath="//input[@id='idSIButton9']")
@@ -36,14 +41,16 @@ public class Loginpomclass
 	@FindBy(xpath= "//input[@id='i0118']")
 	private WebElement Password;
 	
-	public void sendpassword()
+	public void sendpassword() throws IOException 
 	{
-		Password.sendKeys("Tester@AWI^2023");
+//		Password.sendKeys("Tester@AWI^2023");
+		Password.sendKeys(propReader.ExcelStringValueReader("data",2,1));
+		
+//		Password.sendKeys(propReader.init_prop("pass"));
 	}
 	
 	@FindBy(xpath="//input[@id='idSIButton9']")
 	private WebElement signin;
-	
 	public void MSsignin()
 	{
 		signin.click();

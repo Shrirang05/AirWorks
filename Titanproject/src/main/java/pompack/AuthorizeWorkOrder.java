@@ -10,6 +10,7 @@ public class AuthorizeWorkOrder
 {
 	private WebDriver driver;
 	private Actions Act;
+	public static String WorkOrderNo;
 	
 	public  AuthorizeWorkOrder (WebDriver driver)
 	{
@@ -25,13 +26,13 @@ public class AuthorizeWorkOrder
 		 Authorizedworkorder.click();
 	}
 	
-	
+//	WPO-HSR-000233-0523
 	//input[@id='txtWoNo']
 	@FindBy (xpath = "//input[@id='txtWoNo']")
 	private WebElement workorderno;
 	public void Passingworkorderno()
 	{
-		workorderno.sendKeys("WPO-HSR-000229-0423");
+		workorderno.sendKeys(Createworkorderpage.WorkOrderNo);
 	}
 	
 	//span[normalize-space()='Select Aircraft Regn']
@@ -88,7 +89,7 @@ public class AuthorizeWorkOrder
 	}
 	
 	//button[@id='Search']
-	@FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/div[5]/div[2]/div[1]/button[1]")
+	@FindBy (xpath = "//button[@id='btnSearch']")
 	private WebElement Searchbutton;
 	public void clickonSearchbutton()
 	{
@@ -136,7 +137,15 @@ public class AuthorizeWorkOrder
 		 proceedbutton.click();
 	}
 	
-	
+	@FindBy (xpath = "//span[contains(text(),'Work Order \"AWO-HSR-000')]")
+    private WebElement workorderfetching;
+    public void clickonworkorderfetching()
+    {
+    	  String [] v =  workorderfetching.getText().split("\"");
+    	  WorkOrderNo =  v[1] ;
+    	 
+    }
+    
 	
 	
 	

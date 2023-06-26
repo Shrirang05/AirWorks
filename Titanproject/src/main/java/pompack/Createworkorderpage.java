@@ -1,5 +1,7 @@
 package pompack;
 
+import java.io.IOException;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +13,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilpack.propReader;
+
 public class Createworkorderpage 
 {
   
 	private WebDriver driver;
 	public Actions Act;
+	public static String WorkOrderNo;
 	
 	public Createworkorderpage(WebDriver driver)
 	{
@@ -25,6 +30,8 @@ public class Createworkorderpage
 	
 	 JavascriptExecutor js = (JavascriptExecutor) driver;
 	 
+	 
+	//a[@id='2918']
 	//a[@id='4823'] = for pre-titan
 	@FindBy (xpath ="//a[@id='4823']")
 	private WebElement AMROclick;
@@ -69,6 +76,7 @@ public class Createworkorderpage
 	{
 		Numberingtype.click(); 
 	}
+	
 	//option[normalize-space()='WPO-HSR-']												
 	//option[normalize-space()='WPO-HSR']
 	@FindBy (xpath ="//option[normalize-space()='WPO-HSR-']")
@@ -83,7 +91,7 @@ public class Createworkorderpage
 	private WebElement validateWPOHSR;
 	public boolean validateSelectoWPOHSR()
 	{
-		return WPOHSR.isDisplayed(); 
+		return validateWPOHSR.isDisplayed(); 
 	}
 	
 	
@@ -94,10 +102,11 @@ public class Createworkorderpage
 	@FindBy (xpath ="//button[@title='Select Aircraft Regn']")
 	private WebElement AircraftReg;
 	
-	@FindBy (xpath ="(//label[@class='radio'])[2]")
+//	(//label[@class='radio'])[2]
+	@FindBy (xpath ="//label[@class='radio']//input[@value='21']")
 	private WebElement BTTB;
 	
-	//label[normalize-space()='2-BTTB']
+	//label[text()=' 2-BTTB']
 	public void clickonAircraftReg()
 	{
 		AircraftReg.click(); 
@@ -107,7 +116,6 @@ public class Createworkorderpage
 	
 	
 	//select[@id='ddlEngineWO']
-	
 	@FindBy (xpath = "//select[@id='ddlEngineWO']")
 	private WebElement Engine;
 	public void clickonEngine()
@@ -115,6 +123,7 @@ public class Createworkorderpage
 		Engine.click(); 
 	}
 	
+	//select[@id='ddlEngineWO']//option[@value='6'][normalize-space()='CFM56-5B']
 	@FindBy (xpath = "//select[@id='ddlEngineWO']//option[@value='6'][normalize-space()='CFM56-5B']")
 	private WebElement selectEngine;
 	public void selectonEngine()
@@ -123,7 +132,6 @@ public class Createworkorderpage
 	}
 	
 	//select[@id='txtTypeOfCheck']
-	
 	@FindBy (xpath = "//select[@id='txtTypeOfCheck']")
 	private WebElement Typeofcheck;
 	public void selectTypeofcheck()
@@ -143,10 +151,13 @@ public class Createworkorderpage
 	//input[@id='txtCustWorkPkgNo']
 	@FindBy (xpath = "//input[@id='txtCustWorkPkgNo']")
 	private WebElement Customerworkorderno;
-	public void passingtheCustomerworkorderno()
+	public void passingtheCustomerworkorderno() throws IOException
 	{
-		Customerworkorderno.clear();
-		Customerworkorderno.sendKeys("ABC@123"); 
+//		Customerworkorderno.clear();
+		Customerworkorderno.sendKeys(propReader.ExcelStringValueReader("data",5,1));
+		
+//		Customerworkorderno.sendKeys("ABC@123"); 
+		
 	}
 	
 	
@@ -158,24 +169,29 @@ public class Createworkorderpage
 	
 	@FindBy (xpath = "//input[@id='txtPndStDate']")
 	private WebElement plannedstartdate;
-	public void clickonplannedstartdate()
+	public void clickonplannedstartdate() throws IOException
 	{
-		plannedstartdate.sendKeys("20-04-2023");
+//		plannedstartdate.sendKeys("03-03-2023");
+		plannedstartdate.sendKeys(propReader.ExcelDatePicker("data",6,1));
+		
 	}
+	
 	
 
 	@FindBy (xpath = "//input[@id='txtPndEndDate']")
 	private WebElement plannedEnddate;
-	public void clickonplannedEnddate()
+	public void clickonplannedEnddate() throws IOException
 	{
-		plannedEnddate.sendKeys("30-04-2023");
+//		plannedEnddate.sendKeys("30-03-2023");
+		plannedEnddate.sendKeys(propReader.ExcelDatePicker("data",7,1));
 	}
 	
 	@FindBy (xpath = "//input[@id='txtActStartDate']")
 	private WebElement Actualstartdate;
-	public void clickonActualstartdate()
+	public void clickonActualstartdate() throws IOException
 	{
-		Actualstartdate.sendKeys("21-04-2023");
+//		Actualstartdate.sendKeys("05-03-2023");
+		Actualstartdate.sendKeys(propReader.ExcelDatePicker("data",8,1));
 	}
 	//span[normalize-space()='Select Planning Check SPOC']
 	//button[@title='Select Planning Check SPOC']
@@ -228,10 +244,10 @@ public class Createworkorderpage
 	//input[@id='txtSeries']
 	@FindBy (xpath = "//input[@id='txtSeries']")
 	private WebElement Series;
-	public void passingtheseries()
+	public void passingtheseries() throws IOException
 	{
 		Series.clear();
-		Series.sendKeys("12345");
+		Series.sendKeys(propReader.ExcelStringValueReader("data",9,1));
 	}
 	
 	
@@ -288,11 +304,11 @@ public class Createworkorderpage
 	
 	@FindBy (xpath = "//input[@id='txtMDFromDate']")
 	private WebElement MDfromdate;
-	public void SelecttheMDfromdate() throws InterruptedException
+	public void SelecttheMDfromdate() 
 	{
 		
 		MDfromdate.click();
-		Thread.sleep(1000);
+		
 //		MDfromdate.clear();
 //		Thread.sleep(2000);
 //		for (int i=1;i<=10;i++)
@@ -356,9 +372,9 @@ public class Createworkorderpage
 	
 	@FindBy (xpath = "//textarea[@id='txtMD']")
 	private WebElement Maintainancedatafilled;
-	public void passingtheMaintainanceData()
+	public void passingtheMaintainanceData() throws IOException
 	{
-		Maintainancedatafilled.sendKeys("Aircraft Maintainance Data");
+		Maintainancedatafilled.sendKeys(propReader.ExcelStringValueReader("data",10,1));
 	}
 	
 
@@ -506,21 +522,24 @@ public class Createworkorderpage
     public void clickonMenubutton()
     {
     	 Menubutton.click();
+    	
     }
     
-
-       
+  //span[contains(text(),'Work Order "WPO-HSR-000233-0523" created successfu')]
+  // public string v =  Menubutton.getText() 
    
     
+    @FindBy (xpath = "//span[contains(text(),'Work Order \"WPO-HSR-000')]")
+    private WebElement workorderfetching;
+    public void clickonworkorderfetching()
+    {
+    	  String [] v =  workorderfetching.getText().split("\"");
+    	  WorkOrderNo =  v[1] ;
+    	 
+    }
     
     
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
@@ -541,6 +560,112 @@ public class Createworkorderpage
 	
 	
 	
+    //On Test Server
+    
+  
+    @FindBy (xpath = "//a[@id='2918']")
+    private WebElement AMROButton;
+    public void clickonAMROButtonTest()
+    {
+    	AMROButton.click();
+    }
+    
+  //a[normalize-space()='Planning']
+    @FindBy (xpath = " //a[normalize-space()='Planning']")
+    private WebElement Planningbutton;
+    public void clickonPlanningButtonTest()
+    {
+    	Planningbutton.click();
+    }
+    
+    //a[normalize-space()='Work Order']
+    @FindBy (xpath = "//a[normalize-space()='Work Order']")
+    private WebElement WorkOrderdropdown;
+    public void clickonWorkOrderdropdownTest()
+    {
+    	WorkOrderdropdown.click();
+    }
+    
+    //a[text()='Create Work Order']
+    @FindBy (xpath = "//a[text()='Create Work Order']")
+    private WebElement CreateWorkOrder;
+    public void clickonCreateWorkOrderTest()
+    {
+    	CreateWorkOrder.click();
+    }
+    
+  //span[@id='select2-ddlNumType-container']
+    @FindBy (xpath = "//span[@id='select2-ddlNumType-container']")
+    private WebElement NumberingType;
+    public void clickonNumberingTypeTest()
+    {
+    	NumberingType.click();
+    }  
+    
+  //li[@id='select2-ddlNumType-result-pfh4-31']
+    @FindBy (xpath = "//li[text()='WPO-HSR']")
+    private WebElement selectNumberingType;
+    public void clickonselectNumberingTypeTest()
+    {
+    	selectNumberingType.click();
+    }  
+    
+  //span[@id='select2-ddlAirInfo-container']
+    @FindBy (xpath = "//span[@id='select2-ddlAirInfo-container']")
+    private WebElement AircraftRegn;
+    public void clickonAircraftRegntest()
+    {
+    	AircraftRegn.click();
+    } 
+    	
+  //li[@id='select2-ddlAirInfo-result-4l1e-21']
+    @FindBy (xpath = "//li[text()='2-BTTB']")
+    private WebElement selectAircraftRegn;
+    public void clickononeAircraftRegntest()
+    {
+    	selectAircraftRegn.click();
+    } 
+    
+  //label[@id='lblAircraftModel']
+    @FindBy (xpath = "//label[@id='lblAircraftModel']")
+    private WebElement AircraftModel;
+    public boolean validateAircraftModel()
+    {
+    	return AircraftModel.isEnabled();
+    } 
+    
+  //span[@id='select2-ddlEngineWO-container']
+    @FindBy (xpath = "//span[@id='select2-ddlEngineWO-container']")
+    private WebElement engine;
+    public void clickonEnginetest()
+    {
+    	engine.click();
+    }
+    
+  //li[text()='CFM56-5B']
+    @FindBy (xpath = "//li[text()='CFM56-5B']")
+    private WebElement oneengine;
+    public void clickononeengine()
+    {
+    	oneengine.click();
+    }
+    
+    @FindBy (xpath = "//span[text()='Select Type of Check']")
+    private WebElement typeofcheck;
+    public void clickontypeofcheck()
+    {
+    	typeofcheck.click();
+    }
+    
+   
+    @FindBy (xpath = " //li[text()='1 C CHECK']")
+    private WebElement onetypeofcheck;
+    public void clickononetypeofcheck()
+    {
+    	onetypeofcheck.click();
+    }
+    
+    
 	
 	
 	

@@ -9,13 +9,13 @@ import pompack.Createworkorderpage;
 import pompack.Editworkorderpage;
 import utilpack.Utilityclass;
 
-public class TC03_CreateWorkorderSheet extends Testbaseclass
+public class TC03_CreateWorkorderSheet extends TestBaseClassPreServer
 {
 private Createworkorderpage AM;
 private Editworkorderpage EW;
     
     @Test
-    public void verifyAMRObutton() throws IOException, InterruptedException
+    public void verifyCreateworkorder() throws IOException, InterruptedException
     {
     	AM = new Createworkorderpage(driver);
     	AM.clickonamrobutton();
@@ -144,7 +144,7 @@ private Editworkorderpage EW;
         AM.SelecttheMDfromdate();
         log.info("select the Maintainance start date");
         Thread.sleep(1000);
-//        AM.SelecttheMaintainancestartdate();
+
               
        
         AM.SelecttheMaintainanceEnddate();
@@ -157,11 +157,8 @@ private Editworkorderpage EW;
         AM.passingtheMaintainancestatus();
         log.info("passing the maintainance status");
         Thread.sleep(1000);
-//        AM.passingtheMaintainancestatus();
-//        log.info("passing the maintainance status");
-       
-//     
-        AM.clickonAddButton();
+        
+      AM.clickonAddButton();
         log.info("Click on Add button");
         
         AM.clickonCloseButton();
@@ -181,8 +178,8 @@ private Editworkorderpage EW;
         
         Thread.sleep(6000);
        
-//        AM.clickonFirstcheckbox();
-//        log.info("Click on First check box");
+        AM.clickonFirstcheckbox();
+        log.info("Click on First check box");
        
         AM.clickonSecondcheckbox();
         log.info("Click on Second check box");
@@ -201,9 +198,7 @@ private Editworkorderpage EW;
         Thread.sleep(1000);
         
         Utilityclass.getScreenshot(driver, "SS for create work order page"); 
-//        AM.clickoncloseButton();
-//        log.info("Click on close Button");
-//        Thread.sleep(2000);
+       
         
         AM.clickonworkorderbutton();
         log.info("Click on workorder Button");
@@ -211,6 +206,8 @@ private Editworkorderpage EW;
         
         Utilityclass.getScreenshot(driver, "SS for Work order No."); 
         
+        AM.clickonworkorderfetching();
+        System.out.println("Work order no. printed");
         
         
         
