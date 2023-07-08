@@ -73,10 +73,10 @@ public class ViewCloseWorkOrderAMRO3
 	private WebElement selectworkorderserachbox;
 	public void clickonselectworkordercheckbox()
 	{
-		selectworkorderserachbox.sendKeys("AWO-HSR-000736-0523");
+		selectworkorderserachbox.sendKeys("AWO-HSR-000740-0623");
 	}
 	
-	@FindBy (xpath ="//li[text()='AWO-HSR-000736-0523']")
+	@FindBy (xpath ="//li[text()='AWO-HSR-000740-0623']")
 	private WebElement selectoneworkorder;
 	public void clickonselectoneworkorder()
 	{
@@ -349,7 +349,6 @@ public class ViewCloseWorkOrderAMRO3
 		cancelbuttonofgallery.click();
 	}
 	
-	
 	//button[@id='hrefdoc']
 	@FindBy (xpath ="//button[@id='hrefdoc']")
 	private WebElement Relatedphotos;
@@ -357,8 +356,7 @@ public class ViewCloseWorkOrderAMRO3
 	{  
 		Relatedphotos.click();
 	}
-	
-	
+		
 	//td[@class='w2ui-grid-data']//input[@type='checkbox']
 	@FindBy (xpath ="//td[@class='w2ui-grid-data']//input[@type='checkbox']")
 	private WebElement Archivemediacheckbox;

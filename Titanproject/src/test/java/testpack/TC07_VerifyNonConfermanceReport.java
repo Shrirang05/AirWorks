@@ -13,7 +13,7 @@ import org.testng.asserts.SoftAssert;
 import pompack.NonConfermenceReport;
 import utilpack.Utilityclass;
 
-public class TC07_VerifyNonConfermanceReport extends TestBaseClassStagServer
+public class TC07_VerifyNonConfermanceReport extends TestBaseClassPreServer
 {
 	private NonConfermenceReport NC;
 	private SoftAssert SA; 

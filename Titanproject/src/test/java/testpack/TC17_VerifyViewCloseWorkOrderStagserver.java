@@ -10,7 +10,7 @@ import pompack.NRC;
 import pompack.ViewCloseWorkOrder;
 import utilpack.Utilityclass;
 
-public class TC17_VerifyViewCloseWorkOrderStagserver extends TestBaseClassStagServer
+public class TC17_VerifyViewCloseWorkOrderStagserver extends TestBaseClassPreServer
 {
 	private Createworkorderpage AM;
 	private Editworkorderpage EW;

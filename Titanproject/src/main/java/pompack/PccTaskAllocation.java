@@ -26,6 +26,18 @@ public class PccTaskAllocation
 		TaskAllocation.click();
 	}
 	
+	@FindBy (xpath = "//input[@value='AWO-HSR-000740-0623']")
+	private WebElement SelectWorkOrderFromDropdown;
+	public void clickonWorkOrderFromDropdown()
+	{
+		SelectWorkOrderFromDropdown.click();
+	}
+	
+	
+	
+	
+	
+	
 	//span[normalize-space()='Select Finding From Task']
 	@FindBy (xpath = "//span[normalize-space()='Select Finding From Task']")
 	private WebElement findingfromtask;
@@ -92,7 +104,7 @@ public class PccTaskAllocation
 	}
 	
 	//li[@class='active']//input[@value='G00210']
-	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//input[@value='G00210']")
+	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//label[@class='radio'][normalize-space()='Shrirang Rajesh Ladda (TGUR91)']")
 	private WebElement selectAME1;
 	public void clickonparticularAME1()
 	{
@@ -189,11 +201,6 @@ public class PccTaskAllocation
 	
 	
 	
-	
-	
-	
-	
-	
 	//td[contains(text(),'Edit')]
 	@FindBy (xpath = "//td[contains(text(),'Edit')]")
 	private WebElement Editbutton;
@@ -276,7 +283,6 @@ public class PccTaskAllocation
 	private WebElement AllocateButton;
 	public void clickonAllocateButton()
 	{
-		
 		System.out.println(AllocateButton.isDisplayed());
 		AllocateButton.click();
 	}

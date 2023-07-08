@@ -1,5 +1,7 @@
 package testpack;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,7 +14,7 @@ public class TC05_VerifyZoneAllocationpage extends TestBaseClassPreServer
 	private Createworkorderpage AM;
 	private PccZoneAllocation PC;
 	@Test
-	public void VerifyZoneAllocationpage() throws InterruptedException
+	public void VerifyZoneAllocationpage() throws InterruptedException, IOException
 	{
 		AM = new Createworkorderpage(driver);
 		PC = new PccZoneAllocation(driver);
@@ -133,6 +135,14 @@ public class TC05_VerifyZoneAllocationpage extends TestBaseClassPreServer
 		Alert Alt = driver.switchTo().alert();
 		Alt.accept();
 		Thread.sleep(3000);
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 }

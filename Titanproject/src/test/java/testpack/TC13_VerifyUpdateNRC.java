@@ -426,9 +426,7 @@ public class TC13_VerifyUpdateNRC extends TestBaseClassPreServer
   	log.info("Enter Req QTY for 3rd grid");
   	Thread.sleep(2000);
   	
-  	
-  	
-  	
+
   	
     UNR.clickonToolpartNomagnifier();
     log.info("Click on Tool part No magnifier");

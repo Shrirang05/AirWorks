@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-23T12:30:21Z" name="Default suite" finished-at="2023-06-23T12:32:06Z" duration-ms="105319">
+  <suite started-at="2023-07-07T13:05:20Z" name="Default suite" finished-at="2023-07-07T13:06:31Z" duration-ms="70694">
     <groups>
     </groups>
-    <test started-at="2023-06-23T12:30:21Z" name="Default test" finished-at="2023-06-23T12:32:06Z" duration-ms="105319">
-      <class name="testpack.TC18_03_VerifyCloseWorkOrder3rdTask">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:testpack.TC18_03_VerifyCloseWorkOrder3rdTask@6f3c660a]" started-at="2023-06-23T12:30:21Z" name="SetUp" finished-at="2023-06-23T12:31:02Z" duration-ms="41328" status="PASS">
+    <test started-at="2023-07-07T13:05:20Z" name="Default test" finished-at="2023-07-07T13:06:31Z" duration-ms="70694">
+      <class name="customerTestPack.TC02_VerifyEditCustomer">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:customerTestPack.TC02_VerifyEditCustomer@6f3c660a]" started-at="2023-07-07T13:05:20Z" name="SetUp" finished-at="2023-07-07T13:05:52Z" duration-ms="31994" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="VerifyViewCloseWorkOrder()[pri:0, instance:testpack.TC18_03_VerifyCloseWorkOrder3rdTask@6f3c660a]" started-at="2023-06-23T12:31:02Z" name="VerifyViewCloseWorkOrder" finished-at="2023-06-23T12:32:06Z" duration-ms="63926" status="PASS">
+        <test-method signature="verifyAddCustomer()[pri:0, instance:customerTestPack.TC02_VerifyEditCustomer@6f3c660a]" started-at="2023-07-07T13:05:52Z" name="verifyAddCustomer" finished-at="2023-07-07T13:06:31Z" duration-ms="38638" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyViewCloseWorkOrder -->
-      </class> <!-- testpack.TC18_03_VerifyCloseWorkOrder3rdTask -->
+        </test-method> <!-- verifyAddCustomer -->
+      </class> <!-- customerTestPack.TC02_VerifyEditCustomer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

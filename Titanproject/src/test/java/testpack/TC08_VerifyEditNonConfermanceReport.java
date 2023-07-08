@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import pompack.NonConfermenceReport;
 import utilpack.Utilityclass;
 
-public class TC08_VerifyEditNonConfermanceReport extends TestBaseClassStagServer
+public class TC08_VerifyEditNonConfermanceReport extends TestBaseClassPreServer
 {
 	private NonConfermenceReport ENC;
 	

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import pompack.NonConfermenceReport;
 import utilpack.Utilityclass;
 
-public class TC10_VerifyNonConfermanceReportFinal extends TestBaseClassStagServer
+public class TC10_VerifyNonConfermanceReportFinal extends TestBaseClassPreServer
 {
 	private NonConfermenceReport NC;
 

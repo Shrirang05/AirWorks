@@ -110,8 +110,6 @@ public class TC12_Workflowforworkorder extends TestBaseClassPreServer
         log.info("Click on planned start date");
         Thread.sleep(1000);
        
-
-       
         AM.clickonplannedEnddate();
         log.info("click on planned End date");
         Thread.sleep(1000);

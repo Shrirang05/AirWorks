@@ -69,10 +69,10 @@ public class propReader
 		 
 		 public static void main(String[] args) throws IOException 
 		 {
-			System.out.println(propReader.ExcelIntValueReader("data",15,1));
-			
-		 }
+			System.out.println(propReader.ExcelStringValueReader("data",38,1));
+		}
 	
+		 
     
     
    

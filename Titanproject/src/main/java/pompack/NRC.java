@@ -1,6 +1,7 @@
 package pompack;
 
  
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilpack.propReader;
 
 
 
@@ -26,6 +29,7 @@ public class NRC
 		PageFactory.initElements(driver,this);
 	}
 	
+
 	//a[normalize-space()='Base Maintenance']
 	@FindBy (xpath ="//a[normalize-space()='Base Maintenance']")
 	private WebElement Basemaintenance;
@@ -237,10 +241,11 @@ public class NRC
 	//textarea[@id='txtDefect']
 	@FindBy (xpath ="//textarea[@id='txtDefect']")
 	private WebElement Defectordamage;
-	public void Enterdefectordamage()
+	public void Enterdefectordamage() throws IOException
 	{
 		Defectordamage.click();
-		Defectordamage.sendKeys("Test Defect");
+		Defectordamage.sendKeys(propReader.ExcelStringValueReader("data",36,1));
+//		Defectordamage.sendKeys("Test Defect");
 		
 	}
 	
@@ -304,18 +309,19 @@ public class NRC
 //		OffserialNo.click();
 		s = new Actions (driver);
 		s.doubleClick(OffserialNo).perform();
-//	    s.sendKeys("Test Off serial No").perform();
+
      }
 	
 	@FindBy (xpath ="//tr[@id='grid_grid_rec_1']//td[4]")
 	private WebElement OffserialNoColoumn;
-	public void ClickonOffserialNocoloumn()
+	public void ClickonOffserialNocoloumn() throws IOException
 	{  
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(OffserialNoColoumn));
 //		OffserialNo.click();
 		s = new Actions (driver);
-	    s.sendKeys("Test Off serial No").perform();
+		s.sendKeys(propReader.ExcelStringValueReader("data",37,1));
+//	    s.sendKeys("Test Off serial No").perform();
      }
 	
 
@@ -346,9 +352,10 @@ public class NRC
 	//input[@id='grid_grid_edit_1_7']
 	@FindBy (xpath ="//input[@id='grid_grid_edit_1_7']")
 	private WebElement AlternatepartNo;
-	public void EnterAlternatepartNo()
+	public void EnterAlternatepartNo() throws IOException
 	{
-		AlternatepartNo.sendKeys("Test Alternate part No");
+		AlternatepartNo.sendKeys(propReader.ExcelStringValueReader("data",38,1));
+//		AlternatepartNo.sendKeys("Test Alternate part No");
 	}
 	
 	//input[@id='grid_grid_edit_1_8']

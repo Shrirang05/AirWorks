@@ -1,5 +1,7 @@
 package testpack;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
@@ -20,7 +22,7 @@ public class TC06_01_VerifyAuthorizedWorkorder extends TestBaseClassPreServer
 	
 	@Test
 	
-	public void VerifyAuthorizedWorkorder() throws InterruptedException
+	public void VerifyAuthorizedWorkorder() throws InterruptedException, IOException
 	{
 		AM = new Createworkorderpage(driver);
 		PC = new PccZoneAllocation(driver);

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import pompack.NonConfermenceReport;
 
-public class TC09_VerifyAttachementpage extends TestBaseClassStagServer
+public class TC09_VerifyAttachementpage extends TestBaseClassPreServer
 {
 	private NonConfermenceReport NC;
 	private List <String> X1;

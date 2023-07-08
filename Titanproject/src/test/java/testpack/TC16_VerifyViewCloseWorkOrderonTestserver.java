@@ -10,7 +10,7 @@ import pompack.NRC;
 import pompack.ViewCloseWorkOrder;
 import utilpack.Utilityclass;
 
-public class TC16_VerifyViewCloseWorkOrderonTestserver extends TestBaseClassTestServer
+public class TC16_VerifyViewCloseWorkOrderonTestserver extends TestBaseClassPreServer
 {
 
 	private Createworkorderpage AM;

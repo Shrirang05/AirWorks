@@ -390,7 +390,6 @@ public class ViewCloseWorkOrder
 		Selectworkorderstatusopen.click();
 	}
 	
-	// For pre-Titan server
 	
 	
 	

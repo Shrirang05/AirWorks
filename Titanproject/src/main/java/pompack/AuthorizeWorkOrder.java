@@ -1,10 +1,14 @@
 package pompack;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import utilpack.propReader;
 
 public class AuthorizeWorkOrder 
 {
@@ -47,15 +51,15 @@ public class AuthorizeWorkOrder
 	{
 		AircraftReg.click(); 
 		BTTB.click();
-		
-	}
+    }
 	
 	//input[@id='txtTypeCheck']
 	@FindBy (xpath = "//input[@id='txtTypeCheck']")
 	private WebElement Typeofcheck;
-	public void selectTypeofcheck()
+	public void selectTypeofcheck() throws IOException
 	{
-		Typeofcheck.sendKeys("2C CHECK");
+		Typeofcheck.sendKeys(propReader.ExcelStringValueReader("data",33,1));
+//		Typeofcheck.sendKeys("2C CHECK");
 	}
 	
 	

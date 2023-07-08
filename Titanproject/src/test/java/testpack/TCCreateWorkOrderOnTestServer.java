@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pompack.Createworkorderpage;
 import pompack.Editworkorderpage;
 
-public class TCCreateWorkOrderOnTestServer extends TestBaseClassTestServer
+public class TCCreateWorkOrderOnTestServer extends TestBaseClassPreServer
 {
 	private Createworkorderpage AM;
 	private Editworkorderpage EW;

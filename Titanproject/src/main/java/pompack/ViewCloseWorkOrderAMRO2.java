@@ -73,10 +73,10 @@ public class ViewCloseWorkOrderAMRO2
 	private WebElement selectworkorderserachbox;
 	public void clickonselectworkordercheckbox()
 	{
-		selectworkorderserachbox.sendKeys("AWO-HSR-000736-0523");
+		selectworkorderserachbox.sendKeys("AWO-HSR-000740-0623");
 	}
 	
-	@FindBy (xpath ="//li[text()='AWO-HSR-000736-0523']")
+	@FindBy (xpath ="//li[text()='AWO-HSR-000740-0623']")
 	private WebElement selectoneworkorder;
 	public void clickonselectoneworkorder()
 	{
@@ -462,7 +462,7 @@ public class ViewCloseWorkOrderAMRO2
 	}
 	
 	//body[1]/div[1]/div[1]/div[5]/div[2]/div[10]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[2]
-	@FindBy (xpath ="//body[1]/div[1]/div[1]/div[5]/div[2]/div[10]/div[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[1]/td[2]")
+	@FindBy (xpath ="(//td[contains(text(),'Add Record')])[2]")
 	private WebElement AddRecord2;
 	public void ClickonAddRecord2()
 	{  

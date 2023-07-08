@@ -1,18 +1,20 @@
-package testpack;
-
+package customerTestPack;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import pompack.Loginpomclass;
 import utilpack.Utilityclass;
+import utilpack.propReader;
 
-public class TestBaseClassStagServer 
+public class TestBaseClassPreServer2 
 {
 	public WebDriver driver ;
 	private Loginpomclass MS;
@@ -21,7 +23,7 @@ public class TestBaseClassStagServer
 	 @BeforeMethod  
 	   	public void SetUp() throws InterruptedException, IOException
 		  	{
-//			    PropertyConfigurator.configure("log4j.properties");
+			    PropertyConfigurator.configure("log4j.properties");
 	     	    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Shrirang.ladda\\git\\repository\\Titanproject\\DriverFolder2\\chromedriver.exe");	
 	    	    driver = new ChromeDriver();
 	 
@@ -29,8 +31,9 @@ public class TestBaseClassStagServer
 		  		driver.manage().window().maximize();
 		  		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		  		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-//		  		driver.get(propReader.init_prop("TestingEnv"));	
-		  		driver.get("https://stagtitan.airworks.in/Home/Index");
+		  		driver.get(propReader.init_prop("PreTitanEnv"));	
+//		  		driver.get("https://pretitan.airworks.in/Home/Index");
+		  	
 		  		JavascriptExecutor js = (JavascriptExecutor) driver;
 		  		
 		  		MS = new Loginpomclass(driver);
@@ -76,4 +79,7 @@ public class TestBaseClassStagServer
 //					driver.quit();
 //				}
 //		  		
-}
+		  		
+
+		  	
+		  	}

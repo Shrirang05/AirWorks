@@ -1,5 +1,6 @@
 package pompack;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import utilpack.propReader;
 
 
 public class PccZoneAllocation 
@@ -65,7 +68,6 @@ public class PccZoneAllocation
 	public boolean checktheModel()
 	{
 		return Model.isDisplayed();
-		
 	}
 	
 	@FindBy (xpath = "//span[normalize-space()='Work Order']")
@@ -116,7 +118,6 @@ public class PccZoneAllocation
 		AMEMagnifier.click();
 	}
 	
-
 	@FindBy (xpath = "//div[@id='modelAME']//div[@class='modal-body']//button[1]")
 	private WebElement selectAME;
 	public void  clickonAME()
@@ -124,7 +125,6 @@ public class PccZoneAllocation
 		selectAME.click();
 	}
 	
-
 	@FindBy (xpath = "//ul[@class='multiselect-container dropdown-menu show']//input[@value='TGUR91']")
 	private WebElement selectoneAME;
 	public void  clickononeAME()
@@ -139,8 +139,7 @@ public class PccZoneAllocation
 	{
 		deselectAME.click();
 	}
-	
-    
+
 	@FindBy (xpath = "//div[@id='modelAME']//button[@type='button'][normalize-space()='Close']")
 	private WebElement closeAME;
 	public void  clickoncloseAME()
@@ -239,9 +238,10 @@ public class PccZoneAllocation
 	//input[@id='txtAOGCutOffTime']
 	@FindBy (xpath = "//input[@id='txtAOGCutOffTime']")
 	private WebElement AOGcutofftime;
-	public void  passingAOGcutofftime()
+	public void  passingAOGcutofftime() throws IOException
 	{
-		 AOGcutofftime.sendKeys("01:15");
+		AOGcutofftime.sendKeys(propReader.ExcelDatePicker("data",22,1));
+//		 AOGcutofftime.sendKeys("01:15");
 	}
 	
 	//input[@id='txtRTSDate']
@@ -255,14 +255,14 @@ public class PccZoneAllocation
 	//input[@id='txtRTSTime']
 	@FindBy (xpath = "//input[@id='txtRTSTime']")
 	private WebElement RTStime;
-	public void  passingRTStime()
+	public void  passingRTStime() throws IOException
 	{
-		RTStime.sendKeys("02:00");
+		RTStime.sendKeys(propReader.ExcelDatePicker("data",23,1));
+//		RTStime.sendKeys("02:00");
 	}
 	
 	//body[1]/div[1]/div[1]/div[5]/div[3]/div[5]/span[1]/div[1]/button[1]
 	@FindBy (xpath = "/html[1]/body[1]/div[1]/div[1]/div[5]/div[3]/div[5]/span[1]/div[1]/button[1]")
-	                  
 	private WebElement pcccheckspok;
 	public void clickonpcccheckspoc()
 	{

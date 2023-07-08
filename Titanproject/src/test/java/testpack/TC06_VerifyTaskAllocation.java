@@ -39,9 +39,14 @@ public class TC06_VerifyTaskAllocation extends TestBaseClassPreServer
 		PC.selectworkorder();
 		log.info("select work order");
 		  Thread.sleep(1000);
-		PC.selectoneworkorder();
-		log.info("select one work order");
-		  Thread.sleep(1000);
+		PT.clickonWorkOrderFromDropdown();
+		log.info("Click on Work Order From Dropdown");
+//		PC.selectoneworkorder();
+//		log.info("select one work order");
+//		  Thread.sleep(1000);
+		  
+		  
+		  
 //		PT.clickonfindingfromtask();
 //		log.info("Click on finding from task");
 //		  Thread.sleep(1000);
@@ -81,39 +86,41 @@ public class TC06_VerifyTaskAllocation extends TestBaseClassPreServer
 		  
 		  
 		  PT.clickonDefaultInputs();
+		  log.info("click on Default Inputs");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonAWIZoneselect();
+		  log.info("click on AWI Zone select");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonAWIZonecabin();
+		  log.info("click on AWI Zone cabin");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonAWIZoneEmpennage();
+		  log.info("click on AWI Zone Empennage");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonDeselectAWIZone();
+		  log.info("click on De select AWI Zone");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonSelecttradetoAction();
+		  log.info("click on Select trade to Action");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonSelectNDTtradetoAction();
+		  log.info("click on Select NDT trade to Action");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonDeSelectNDTtradetoAction();
+		  log.info("click on De Select NDT trade to Action");
 		  Thread.sleep(1000);
 		  
 		  PT.clickonApplybutton();
+		  log.info("click on Apply button");
 		  Thread.sleep(1000);
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
+	
 		  
 		PT.clickonEditbutton();
 		log.info("Click on Edit Button");

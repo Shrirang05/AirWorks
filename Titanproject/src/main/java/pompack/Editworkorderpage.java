@@ -132,8 +132,6 @@ public class Editworkorderpage
 	   return ValidateUpdateworkorder.isDisplayed();
 	}
 	
-	
-	
 	@FindBy (xpath = "//select[@id='ddlEngineWO']//option[@value='117'][normalize-space()='V2500-A1']")
 	private WebElement changeEngine;
 	public void clickonanotherEngine()
@@ -176,8 +174,6 @@ public class Editworkorderpage
 	}
 	
 	
-	
-	
 	@FindBy (xpath = "//input[@id='txtSeries']")
 	private WebElement Series;
 	public void passingtheseriesforedit() throws IOException
@@ -189,27 +185,28 @@ public class Editworkorderpage
 	
 	@FindBy (xpath = "//input[@id='txtPndStDate']")
 	private WebElement plannedstartdate;
-	public void clickonplannedstartdate()
+	public void clickonplannedstartdate() throws IOException
 	{
 		plannedstartdate.clear();
-		plannedstartdate.sendKeys("04-05-2023");
+		plannedstartdate.sendKeys(propReader.ExcelDatePicker("data",16,1));
 	}
 	
 
 	@FindBy (xpath = "//input[@id='txtPndEndDate']")
 	private WebElement plannedEnddate;
-	public void clickonplannedEnddate()
+	public void clickonplannedEnddate() throws IOException
 	{
 		plannedEnddate.clear();
-		plannedEnddate.sendKeys("30-05-2023");
+		plannedEnddate.sendKeys(propReader.ExcelDatePicker("data",17,1));
+//		plannedEnddate.sendKeys("30-05-2023");
 	}
 
 	@FindBy (xpath = "//input[@id='txtActStartDate']")
 	private WebElement Actualstartdate;
-	public void clickonActualstartdate()
+	public void clickonActualstartdate() throws IOException
 	{
 		Actualstartdate.clear();
-		Actualstartdate.sendKeys("06-05-2023");
+		Actualstartdate.sendKeys(propReader.ExcelDatePicker("data",18,1));
 	}
 	
 	//button[@id='btnWorkOrderConfirm']
@@ -218,7 +215,6 @@ public class Editworkorderpage
 	public void clickonConfirmworkorderbutton()
 	{
 		Confirmworkorderbutton.click();
-	
 	}
 	
 	//button[normalize-space()='ok']
@@ -227,7 +223,13 @@ public class Editworkorderpage
 	public void clickonAcceptworkorder()
 	{
 		Acceptworkorder.click();
-	
 	}
 	
+	
+	
+	
+	
+	
+	
+		
 }

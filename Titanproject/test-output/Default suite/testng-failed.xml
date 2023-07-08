@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testpack.TC18_03_VerifyCloseWorkOrder3rdTask">
+      <class name="customerTestPack.TC02_VerifyEditCustomer">
         <methods>
-          <include name="VerifyViewCloseWorkOrder"/>
           <include name="SetUp"/>
+          <include name="verifyAddCustomer"/>
         </methods>
-      </class> <!-- testpack.TC18_03_VerifyCloseWorkOrder3rdTask -->
+      </class> <!-- customerTestPack.TC02_VerifyEditCustomer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
