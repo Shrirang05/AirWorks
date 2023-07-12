@@ -62,7 +62,6 @@ public class NRC
 //		 Act.selectByValue("2-BTTB");
 	}
 	
-	//input[@value='2-BTTB']
 	@FindBy (xpath ="//input[@value='2-BTTB']")
 	private WebElement selectAircraftRegn;
 	public void clickonselectAircraftRegn()

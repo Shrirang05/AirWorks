@@ -199,12 +199,12 @@ private Editworkorderpage EW;
         
         Utilityclass.getScreenshot(driver, "SS for create work order page"); 
        
-        
         AM.clickonworkorderbutton();
         log.info("Click on workorder Button");
         Thread.sleep(2000);
+      
         
-        Utilityclass.getScreenshot(driver, "SS for Work order No."); 
+        Utilityclass.getScreenshot(driver, "SS for Work order No.");
         
         AM.clickonworkorderfetching();
         System.out.println("Work order no. printed");

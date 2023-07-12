@@ -408,7 +408,7 @@ public class Createworkorderpage
    	private WebElement Magnifier;
     public void clickonMagnifierglass()
    	{
-    	   Magnifier.click();
+    	Magnifier.click();
    	}
     
     @FindBy (xpath = "//select[@id='ddlAircraftModelMasterssVT']")
@@ -509,9 +509,9 @@ public class Createworkorderpage
 //        workorderbutton.click();
 //    	
 //    	 workorderbutton.click();
-    	
-    	
+    
     }
+    
     
     
     
@@ -560,110 +560,10 @@ public class Createworkorderpage
 	
 	
 	
-    //On Test Server
+    
     
   
-    @FindBy (xpath = "//a[@id='2918']")
-    private WebElement AMROButton;
-    public void clickonAMROButtonTest()
-    {
-    	AMROButton.click();
-    }
-    
-  //a[normalize-space()='Planning']
-    @FindBy (xpath = " //a[normalize-space()='Planning']")
-    private WebElement Planningbutton;
-    public void clickonPlanningButtonTest()
-    {
-    	Planningbutton.click();
-    }
-    
-    //a[normalize-space()='Work Order']
-    @FindBy (xpath = "//a[normalize-space()='Work Order']")
-    private WebElement WorkOrderdropdown;
-    public void clickonWorkOrderdropdownTest()
-    {
-    	WorkOrderdropdown.click();
-    }
-    
-    //a[text()='Create Work Order']
-    @FindBy (xpath = "//a[text()='Create Work Order']")
-    private WebElement CreateWorkOrder;
-    public void clickonCreateWorkOrderTest()
-    {
-    	CreateWorkOrder.click();
-    }
-    
-  //span[@id='select2-ddlNumType-container']
-    @FindBy (xpath = "//span[@id='select2-ddlNumType-container']")
-    private WebElement NumberingType;
-    public void clickonNumberingTypeTest()
-    {
-    	NumberingType.click();
-    }  
-    
-  //li[@id='select2-ddlNumType-result-pfh4-31']
-    @FindBy (xpath = "//li[text()='WPO-HSR']")
-    private WebElement selectNumberingType;
-    public void clickonselectNumberingTypeTest()
-    {
-    	selectNumberingType.click();
-    }  
-    
-  //span[@id='select2-ddlAirInfo-container']
-    @FindBy (xpath = "//span[@id='select2-ddlAirInfo-container']")
-    private WebElement AircraftRegn;
-    public void clickonAircraftRegntest()
-    {
-    	AircraftRegn.click();
-    } 
-    	
-  //li[@id='select2-ddlAirInfo-result-4l1e-21']
-    @FindBy (xpath = "//li[text()='2-BTTB']")
-    private WebElement selectAircraftRegn;
-    public void clickononeAircraftRegntest()
-    {
-    	selectAircraftRegn.click();
-    } 
-    
-  //label[@id='lblAircraftModel']
-    @FindBy (xpath = "//label[@id='lblAircraftModel']")
-    private WebElement AircraftModel;
-    public boolean validateAircraftModel()
-    {
-    	return AircraftModel.isEnabled();
-    } 
-    
-  //span[@id='select2-ddlEngineWO-container']
-    @FindBy (xpath = "//span[@id='select2-ddlEngineWO-container']")
-    private WebElement engine;
-    public void clickonEnginetest()
-    {
-    	engine.click();
-    }
-    
-  //li[text()='CFM56-5B']
-    @FindBy (xpath = "//li[text()='CFM56-5B']")
-    private WebElement oneengine;
-    public void clickononeengine()
-    {
-    	oneengine.click();
-    }
-    
-    @FindBy (xpath = "//span[text()='Select Type of Check']")
-    private WebElement typeofcheck;
-    public void clickontypeofcheck()
-    {
-    	typeofcheck.click();
-    }
-    
    
-    @FindBy (xpath = " //li[text()='1 C CHECK']")
-    private WebElement onetypeofcheck;
-    public void clickononetypeofcheck()
-    {
-    	onetypeofcheck.click();
-    }
     
     
 	

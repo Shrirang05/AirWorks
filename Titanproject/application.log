@@ -1,32 +1,11 @@
-2023-07-07 18:35:30,161  INFO [main] Titan:42 - clickonsignINbutton
-2023-07-07 18:35:34,937  INFO [main] Titan:46 - Send username
-2023-07-07 18:35:38,026  INFO [main] Titan:52 - Click on next button
-2023-07-07 18:35:41,261  INFO [main] Titan:57 - Send Password
-2023-07-07 18:35:45,002  INFO [main] Titan:62 - MS sign in
-2023-07-07 18:35:51,588  INFO [main] Titan:67 - Click on yes button
-2023-07-07 18:35:52,890  INFO [main] Titan:27 - click on AMRO button
-2023-07-07 18:35:58,516  INFO [main] Titan:30 - click on planning button
-2023-07-07 18:35:59,764  INFO [main] Titan:33 - Click On Customers
-2023-07-07 18:36:01,728  INFO [main] Titan:36 - Click On Edit Customers
-2023-07-07 18:36:02,929  INFO [main] Titan:39 - Enter Customer Code
-2023-07-07 18:36:04,278  INFO [main] Titan:42 - Enter Customer name
-2023-07-07 18:36:05,391  INFO [main] Titan:45 - Click On Engagement Type
-2023-07-07 18:36:06,573  INFO [main] Titan:48 - Click On CAMO Engagement Type
-2023-07-07 18:36:07,800  INFO [main] Titan:51 - Enter Account Group
-2023-07-07 18:36:09,141  INFO [main] Titan:54 - Enter Phone No
-2023-07-07 18:36:10,436  INFO [main] Titan:57 - Enter View Customer Email
-2023-07-07 18:36:11,673  INFO [main] Titan:60 - Enter Fax No
-2023-07-07 18:36:12,913  INFO [main] Titan:63 - Click On Status
-2023-07-07 18:36:14,062  INFO [main] Titan:66 - Click On Active Status
-2023-07-07 18:36:15,367  INFO [main] Titan:69 - Click On Search Button
-2023-07-07 18:36:17,151  INFO [main] Titan:75 - Click On Edit pen from grid
-2023-07-07 18:36:18,520  INFO [main] Titan:78 - Enter Edit Cutomer Name
-2023-07-07 18:36:19,751  INFO [main] Titan:81 - Enter Edit Engagement Type
-2023-07-07 18:36:20,903  INFO [main] Titan:84 - Select One Engagement Type
-2023-07-07 18:36:22,256  INFO [main] Titan:87 - Edit Account Group
-2023-07-07 18:36:23,583  INFO [main] Titan:90 - Edit phone No
-2023-07-07 18:36:24,898  INFO [main] Titan:93 - Enter Edit Fax No
-2023-07-07 18:36:26,173  INFO [main] Titan:96 - Enter Edit Pan No
-2023-07-07 18:36:27,555  INFO [main] Titan:99 - Enter Edit Tan No
-2023-07-07 18:36:28,920  INFO [main] Titan:102 - Enter Edit Remarks
-2023-07-07 18:36:30,100  INFO [main] Titan:105 - Click On Add record Edit Address details
+2023-07-12 17:01:27,436  INFO [main] Titan:42 - clickonsignINbutton
+2023-07-12 17:01:32,162  INFO [main] Titan:46 - Send username
+2023-07-12 17:01:35,283  INFO [main] Titan:52 - Click on next button
+2023-07-12 17:01:38,561  INFO [main] Titan:57 - Send Password
+2023-07-12 17:01:41,997  INFO [main] Titan:62 - MS sign in
+2023-07-12 17:01:45,748  INFO [main] Titan:67 - Click on yes button
+2023-07-12 17:01:50,534  INFO [main] Titan:26 - click on AMRO button
+2023-07-12 17:01:58,475  INFO [main] Titan:29 - click on planning button
+2023-07-12 17:02:00,977  INFO [main] Titan:32 - click on work order
+2023-07-12 17:02:05,202  INFO [main] Titan:35 - click on Edit work order
+2023-07-12 17:02:07,510  INFO [main] Titan:40 - validate Select work order page opens

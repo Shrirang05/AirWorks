@@ -17,7 +17,7 @@ public class TC02_VerifyEditCustomer extends TestBaseClassPreServer2
 	private EditCustomerDetails ECD;
 	
 	 @Test
-	 public void verifyAddCustomer() throws IOException, InterruptedException
+	 public void verifyEditCustomer() throws IOException, InterruptedException
 	  {
 	    	AM = new Createworkorderpage(driver);
 	    	AC = new AddCustomer(driver);
@@ -101,9 +101,92 @@ public class TC02_VerifyEditCustomer extends TestBaseClassPreServer2
 	    	ECD.EnterEditRemarks();
 	    	log.info("Enter Edit Remarks");
 	    	Thread.sleep(1000);
+	    	
+	    	//Address details adding started for 2nd record for Edit Address details
+	    	
 	    	ECD.ClickOnAddrecordEditAddressdetails();
-	    	log.info("Click On Add record Edit Address details");
+	    	log.info("Click On Add Record Edit Address details");
 	    	Thread.sleep(1000);
+	    	ECD.EnterAddress1();
+	    	log.info("Enter Address 1");
+	    	Thread.sleep(1000);
+	    	ECD.EnterAddress2();
+	    	log.info("Enter Address 2");
+	    	Thread.sleep(1000);
+	    	ECD.EnterAddress3();
+	    	log.info("Enter Address 3");
+	    	Thread.sleep(1000);
+	    	ECD.ClickonCountry();
+	    	log.info("Click On Country");
+	    	Thread.sleep(1000);
+	    	ECD.ClickonIndiaCountry();
+	    	log.info("Click On India Country");
+	    	Thread.sleep(1000);
+	    	ECD.ClickonState();
+	    	log.info("Click On State");
+	    	Thread.sleep(1000);
+	    	ECD.ClickonMaharashtraState();
+	    	log.info("Click On Maharashtra State");
+	    	Thread.sleep(1000);
+	    	ECD.ClickOnCity();
+	    	log.info("Click On City");
+	    	Thread.sleep(1000);
+	    	ECD.ClickOnPuneCity();
+	    	log.info("Click On Pune City");
+	    	Thread.sleep(1000);
+	    	ECD.EnterZipCode();
+	    	log.info("Enter Zip Code");
+	    	Thread.sleep(1000);
+	    	ECD.ClickOnDefault();
+	    	log.info("Click On Default");
+	    	Thread.sleep(1000);
+	    	ECD.ClickOnDefaultNo();
+	    	log.info("Click On Default No");
+	    	Thread.sleep(1000);
+	    	ECD.EnterGSTNo();
+	    	log.info("Enter GST No");
+	    	Thread.sleep(1000);
+	    	ECD.ClickOnSaveButton();
+	    	log.info("Click On Save Button");
+	    	Thread.sleep(1000);
+	    	
+	    	//Address details adding started for 2nd record for contact person
+	    	
+	    	ECD.ClickOnAddRecordContactPerson2();
+	    	log.info("Click On Add Record Contact Person 2");
+	    	Thread.sleep(1000);
+	    	ECD.EnterNameOfContactPerson();
+	    	log.info("Enter Name Of Contact Person");
+	    	Thread.sleep(1000);
+	    	ECD.EnterDesignation();
+	    	log.info("Enter Designation");
+	    	Thread.sleep(1000);
+	    	ECD.EnterDepartment();
+	    	log.info("Enter Department");
+	    	Thread.sleep(1000);
+	    	ECD.EnterPhoneNoForContactperson();
+	    	log.info("Enter Phone No For Contact Person");
+	    	Thread.sleep(1000);
+	    	ECD.EnterEmailForContactperson();
+	    	log.info("Enter Email For Contact Person");
+	    	Thread.sleep(1000);
+	    	ECD.EnterFaxForContactperson();
+	    	log.info("Enter Fax For Contact Person");
+	    	Thread.sleep(1000);
+	    	ECD.EnterZipCodeForContactperson();
+	    	log.info("Enter Zip Code For Contact Person");
+	    	Thread.sleep(1000);
+	    	ECD.EnterDefaultForContactperson();
+	    	log.info("Enter Default For Contact Person");
+	    	Thread.sleep(1000);
+	    	ECD.ClickOnSaveContactPersonDetails();
+	    	log.info("Click On Save Contact Person Details");
+	    	Thread.sleep(1000);
+	    	ECD.ClickOnUpdateCustomerDetails();
+	    	log.info("Click On Update Customer Details");
+	    	Thread.sleep(1000);
+	    	
+	    	
 	    	
 	    	
 	    	

@@ -31,7 +31,7 @@ public void ClickonEditCustomer()
 private WebElement CustomerCode;
 public void EnterCustomerCode()
 {
-	CustomerCode.sendKeys("Testcode12345");
+	CustomerCode.sendKeys("Code000");
 }
 	
 @FindBy (xpath ="//input[@id='txtCustomerName']")
@@ -185,6 +185,8 @@ public void EnterEditRemarks()
 	EditRemarks.sendKeys("Edit Test Remarks");
 }
 
+    //Address details adding started for 2nd record for Edit Address details
+
 @FindBy (xpath ="(//td[contains(text(),'Add Record')])[1]")
 private WebElement AddrecordEditAddressdetails;
 public void ClickOnAddrecordEditAddressdetails()
@@ -192,7 +194,195 @@ public void ClickOnAddrecordEditAddressdetails()
 	AddrecordEditAddressdetails.click();
 }
 
+//input[@id='txtAddress1']
+@FindBy (xpath ="//input[@id='txtAddress1']")
+private WebElement Address1;
+public void EnterAddress1()
+{
+	Address1.sendKeys("Edit Address 1");
+}
 
+//input[@id='txtAddress2']
+@FindBy (xpath ="//input[@id='txtAddress2']")
+private WebElement Address2;
+public void EnterAddress2()
+{
+	Address2.sendKeys("Edit Address 2");
+}
+
+//input[@id='txtAddress3']
+@FindBy (xpath ="//input[@id='txtAddress3']")
+private WebElement Address3;
+public void EnterAddress3()
+{
+	Address3.sendKeys("Edit Address 3");
+}
+
+//select[@id='ddlCountry']
+@FindBy (xpath ="//select[@id='ddlCountry']")
+private WebElement Country;
+public void ClickonCountry()
+{
+	Country.click();
+}
+
+@FindBy (xpath ="//option[text()='India']")
+private WebElement IndiaCountry;
+public void ClickonIndiaCountry()
+{
+	IndiaCountry.click();
+}
+
+@FindBy (xpath ="//select[@id='ddlState']")
+private WebElement State;
+public void ClickonState()
+{
+	State.click();
+}
+
+@FindBy (xpath ="//option[text()='Maharashtra']")
+private WebElement MaharashtraState;
+public void ClickonMaharashtraState()
+{
+	MaharashtraState.click();
+}
+
+@FindBy (xpath ="//select[@id='ddlCity']")
+private WebElement City;
+public void ClickOnCity()
+{
+	City.click();
+}
+
+@FindBy (xpath ="//option[text()='Pune']")
+private WebElement PuneCity;
+public void ClickOnPuneCity()
+{
+	PuneCity.click();
+}
+
+//input[@id='txtZipCode']
+@FindBy (xpath ="//input[@id='txtZipCode']")
+private WebElement ZipCode;
+public void EnterZipCode()
+{
+	ZipCode.sendKeys("123456");
+}
+
+//select[@id='ddlDefault']
+@FindBy (xpath ="//select[@id='ddlDefault']")
+private WebElement Default;
+public void ClickOnDefault()
+{
+	Default.click();
+}
+
+@FindBy (xpath ="//option[text()='No']")
+private WebElement DefaultNo;
+public void ClickOnDefaultNo()
+{
+	DefaultNo.click();
+}
+
+//input[@id='txtGST']
+@FindBy (xpath ="//input[@id='txtGST']")
+private WebElement GSTNo;
+public void EnterGSTNo()
+{
+	GSTNo.sendKeys("123123");
+}
+
+//button[@id='btnAddressSave']
+@FindBy (xpath ="//button[@id='btnAddressSave']")
+private WebElement SaveButton;
+public void ClickOnSaveButton()
+{
+	SaveButton.click();
+}
+
+//Address details adding started for 2nd record for contact person
+
+@FindBy (xpath ="(//td[contains(text(),'Add Record')])[2]")
+private WebElement AddRecordContactPerson;
+public void ClickOnAddRecordContactPerson2()
+{
+	AddRecordContactPerson.click();
+}
+
+//input[@id='txtNameCP']
+@FindBy (xpath ="//input[@id='txtNameCP']")
+private WebElement NameOfContactPerson;
+public void EnterNameOfContactPerson()
+{
+	NameOfContactPerson.sendKeys("Shrirang R ladda");
+}
+
+@FindBy (xpath ="//input[@id='txtDesignationCP']")
+private WebElement Designation;
+public void EnterDesignation()
+{
+	Designation.sendKeys("Quality Engineers");
+}
+
+@FindBy (xpath ="//input[@id='txtDepartmentCP']")
+private WebElement Department;
+public void EnterDepartment()
+{
+	Department.sendKeys("IT");
+}
+
+@FindBy (xpath ="//input[@id='txtPhoneNoCP']")
+private WebElement PhoneNoForContactperson;
+public void EnterPhoneNoForContactperson()
+{
+	PhoneNoForContactperson.sendKeys("8378922780");
+}
+
+//input[@id='txtEMailCP']
+@FindBy (xpath ="//input[@id='txtEMailCP']")
+private WebElement EmailForContactperson;
+public void EnterEmailForContactperson()
+{
+	EmailForContactperson.sendKeys("shrirangladda5@gmail.com");
+}
+
+@FindBy (xpath ="//input[@id='txtFaxCP']")
+private WebElement FaxForContactperson;
+public void EnterFaxForContactperson()
+{
+	FaxForContactperson.sendKeys("123456");
+}
+
+@FindBy (xpath ="//input[@id='txtZipCodeCP']")
+private WebElement ZipCodeForContactperson;
+public void EnterZipCodeForContactperson()
+{
+	ZipCodeForContactperson.sendKeys("422605");
+}
+
+//input[@id='txtDefaultCP']
+@FindBy (xpath ="//input[@id='txtDefaultCP']")
+private WebElement DefaultForContactperson;
+public void EnterDefaultForContactperson()
+{
+	DefaultForContactperson.sendKeys("Tested");
+}
+
+//button[@id='btnCPSave']
+@FindBy (xpath ="//button[@id='btnCPSave']")
+private WebElement SaveContactPersonDetails;
+public void ClickOnSaveContactPersonDetails()
+{
+	SaveContactPersonDetails.click();
+}
+
+//button[@onclick='Update()']
+@FindBy (xpath ="//button[@onclick='Update()']")
+private WebElement UpdateCustomerDetails;
+public void ClickOnUpdateCustomerDetails()
+{
+	UpdateCustomerDetails.click();
+}
 
 
 

@@ -3,6 +3,10 @@ package customerTestPack;
 import java.io.IOException;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import customerPomPack.AddCustomer;
@@ -134,17 +138,39 @@ public class TC01_VerifyAddCustomer extends TestBaseClassPreServer2
 	        Thread.sleep(1000);
 	        AC.EnterContactPersonDefault();
 	        log.info("EnterContactPersonDefault");
-	        Thread.sleep(2000);
-//	        AC.ClickonSavebutton();
-//	        log.info("ClickonSavebutton");
-	        Thread.sleep(2000);
+	        Thread.sleep(2000);        
+	        
+	        AC.ClickOnSaveContactPersonDetails();
+	        log.info("Click On Save Contact Person Details");
+	        Thread.sleep(1000);
+	        
+	      
 	        AC.ClickOnSaveAddCustomer();
 	        log.info("Click On Save Add Customer");
-	        Alert Alt = driver.switchTo().alert();
-			Alt.accept();
-			Thread.sleep(2000);
 	        
-	    	
+	        
+	        
+//	        Assert.assertEquals(, expectedResult, "Message displayed if assertion fails");
+	        
+	        
+	        
+//	        Alert Alt = driver.switchTo().alert();
+//			Alt.accept();
+//			Thread.sleep(2000);
+	        
+			 try {
+		            WebDriverWait wait = new WebDriverWait(driver, 20);
+		            wait.until(ExpectedConditions.alertIsPresent());
+
+		            Alert alert = driver.switchTo().alert();
+		            alert.accept();
+		            // Perform actions on the alert
+		            // For example, you can accept the alert using alert.accept();
+
+		        } catch (NoAlertPresentException e) {
+		            // Handle the "No Alert Present Exception" here
+		            System.out.println("No alert was found.");
+		        }
 	    	
 	    	
 	    	

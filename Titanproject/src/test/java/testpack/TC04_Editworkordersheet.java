@@ -22,7 +22,6 @@ public class TC04_Editworkordersheet extends TestBaseClassPreServer
 		EW = new Editworkorderpage(driver);
 		
 		
-		Thread.sleep(2000);
 		AM.clickonamrobutton();
 		log.info("click on AMRO button");
 		Thread.sleep(2000);

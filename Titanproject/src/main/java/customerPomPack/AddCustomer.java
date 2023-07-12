@@ -42,7 +42,7 @@ public void ClickOnAddCustomers()
 private WebElement CustomerCode;
 public void EnterCustomerCode()
 {
-	CustomerCode.sendKeys("Testcode12345");
+	CustomerCode.sendKeys("Code000");
 }
 
 @FindBy (xpath ="//input[@id='txtCustomerName']")
@@ -281,23 +281,11 @@ public void EnterContactPersonDefault()
 }
 
 
-@FindBy (xpath ="(//button[@id='btnCPSave'])[1]")
-private WebElement SavebuttonContactperson;
-public void ClickOnSaveButton()
-{   
-	WebDriverWait wait = new WebDriverWait(driver, 20);
-	wait.until(ExpectedConditions.visibilityOf(SavebuttonContactperson));
-	
-	Act = new Actions(driver);
-	Act.click(SavebuttonContactperson);
-	
-//	js.executeScript("arguments[0].scrollIntoView(true);", SavebuttonContactperson);
-//	SavebuttonContactperson.click();
-	
-
-	
-//	js.executeScript("arguments[0].click();", SavebuttonContactperson);
-//	SavebuttonContactperson.click();
+@FindBy (xpath ="//button[@id='btnCPSave']")
+private WebElement SaveContactPersonDetails;
+public void ClickOnSaveContactPersonDetails()
+{
+	SaveContactPersonDetails.click();
 }
 
 //div[@class='col-sm-2']//button[@type='submit'][normalize-space()='Save']
